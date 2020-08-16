@@ -42,13 +42,15 @@ void draw() {
       break;
     case 4:
       //Jugar;
+      player.mover();
+      player.display();
       ayuda();
       break;
   }
   
   oneClick();
  
-  player.display();
+ 
 }
 
 static boolean[] keys = new boolean[7];
