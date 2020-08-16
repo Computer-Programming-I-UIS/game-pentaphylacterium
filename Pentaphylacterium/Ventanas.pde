@@ -8,6 +8,15 @@ void crearBotones(){
   botones[5] = new Boton(resizeX(200), height - resizeY(250), resizeX(650), resizeY(160), "Atras");
 }
 
+void crearNiveles() {
+  niveles = new Nivel[5];
+  niveles[0] = new Nivel();
+  niveles[1] = new Nivel();
+  niveles[2] = new Nivel();
+  niveles[3] = new Nivel();
+  niveles[4] = new Nivel();
+}
+
 void menu() {
   botones[0].dibujar();
   if(botones[0].click()){

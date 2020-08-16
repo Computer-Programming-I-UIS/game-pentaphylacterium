@@ -1,5 +1,4 @@
 class Protagonista { 
-  
  int x;
  int y;
  int px;
@@ -75,13 +74,13 @@ void mover(){
   
 }
 
-void keyPressed() {
+/*void keyPressed() {
   setMove(keyCode, true);
 }
  
 void keyReleased() {
   setMove(keyCode, false);
-}
+}*/
  
 boolean setMove(int k, boolean b) {
   switch (k) {
