@@ -16,47 +16,47 @@ Protagonista(int posx, int posy) { //constructor de la clase
   
 }
 
-void mover(){
+  void mover(){
   
- if(isUp == true){
-   py-=yvel;
-  delay(150);
-  b++;
-  counter=b;
-  if (b==15) b=11;
- }
+   if(isUp == true){ //mover arriba
+     py-=yvel;
+     delay(150);
+     b++;
+     counter=b;
+     if (b==15) b=11;
+    }
  
- if(isDown){
-   py+=yvel;
-  delay(150);
-  a++;
-  counter=a;
-  if (a==3) a=-1;
- }
+   if(isDown){ // mover abajo
+     py+=yvel;
+     delay(150);
+     a++;
+     counter=a;
+     if (a==3) a=-1;
+   }
  
- if(isLeft){
-   px-=xvel;
-  delay(150);
-  c++;
-  counter=c;
-  if (c==7) c=3;
- }
+   if(isLeft){ // mover izquierda
+     px-=xvel;
+     delay(150);
+     c++;
+     counter=c;
+     if (c==7) c=3;
+   }
  
- if(isRight){
-   px+=xvel;
-  delay(150);
-  d++;
-  counter=d;
-  if (d==11) d=7;
- }
-}
+   if(isRight){ // mover derecha
+     px+=xvel;
+     delay(150);
+     d++;
+     counter=d;
+     if (d==11) d=7;
+   }
+  }
  
   void display() { 
     x=(counter%4)*32;
     y=(counter/4)*48;
-  copy(sprite,x,y,32,48,px,py,32,48);
+    copy(sprite,x,y,32,48,px,py,32,48);
   
-  //apuntar
+    //apuntar
     float angle = atan2(mouseY - py, mouseX - px);
     float ax = px + 1000*cos(angle);
     float by = py + 1000*sin(angle);
@@ -69,29 +69,29 @@ void mover(){
   
 }
 
-void keyPressed() {
-  setMove(keyCode, true);
-}
- 
-void keyReleased() {
-  setMove(keyCode, false);
-}
- 
-boolean setMove(int k, boolean b) {
-  switch (k) {
-  case UP:
-    return isUp = b;
- 
-  case DOWN:
-    return isDown = b;
- 
-  case LEFT:
-    return isLeft = b;
- 
-  case RIGHT:
-    return isRight = b;
- 
-  default:
-    return b;
+  void keyPressed() {
+    setMove(keyCode, true);
   }
-}
+ 
+  void keyReleased() {
+    setMove(keyCode, false);
+  }
+ 
+  boolean setMove(int k, boolean b) {
+    switch (k) {
+      case UP:
+        return isUp = b;
+ 
+      case DOWN:
+        return isDown = b;
+ 
+      case LEFT:
+        return isLeft = b;
+ 
+      case RIGHT:
+        return isRight = b;
+ 
+      default:
+        return b;
+    }
+  }
