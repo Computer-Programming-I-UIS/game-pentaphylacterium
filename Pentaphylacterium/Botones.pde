@@ -20,6 +20,7 @@ void dibujar() {
       mouse = false;
 
     if (mouse) {
+      stroke(0);
       strokeWeight(2);
       fill(#146428);
       rect(x, y, 1.5*resizeX(w), 2*resizeY(h));
@@ -28,6 +29,7 @@ void dibujar() {
       textAlign(CENTER, CENTER);
       text(texto, x + w/2, y + h/2);
     } else {
+      stroke(0);
       strokeWeight(2);
       fill(#3C6450);
       rect(x, y, 1.5*resizeX(w), 2*resizeY(h));

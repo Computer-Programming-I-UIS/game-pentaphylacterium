@@ -1,10 +1,17 @@
 class Nivel {
   
-  Jugador jugador = new Jugador(30, height/2, 2, 10);
+  Protagonista player = new Protagonista(width/2, height/2, 8);
   boolean ready = false;
   
+  ArrayList<Disparo> disparo = new ArrayList();
+  
   void jugar(){
-    jugador.dibujar();
-    jugador.controles();
+    player.dibujar();
+    player.controles();
+    
+    for(int numDisparos = 0; numDisparos < disparo.size(); numDisparos ++){
+      Disparo bala = disparo.get(numDisparos);
+      bala.dibujar();
+    }
   }
 }
