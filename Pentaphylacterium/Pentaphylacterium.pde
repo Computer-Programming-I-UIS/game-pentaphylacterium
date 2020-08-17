@@ -15,13 +15,16 @@ static int numNivel = 0;
 static int numVentana = 0;
 //Bloque obstaculo;
 Boton[] botones;
+
+Escenario nivel;
  
 void setup() {
   size(1325, 600);
   crearBotones();
   crearNiveles();    //funciones que están en la pestaña Ventanas
+  nivel = new Escenario(44,20,"Nivel1.txt");
 }
- 
+
 void draw() {
   background(#1E643C);
   
@@ -39,6 +42,8 @@ void draw() {
       ayuda();
       break;
     case 4:
+      nivel.obtenerDatos();
+      nivel.crearEscenario();
       niveles[numNivel].jugar();
       opciones();
       break;
