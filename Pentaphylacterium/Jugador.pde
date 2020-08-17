@@ -35,5 +35,13 @@ class Jugador{
       x = width-r;
     if(x < 0)
       x = 0;
+    if(keys[0] == true && y <= height)
+      y -= vel;
+    if(keys[2] == true && x >= r)
+      y += vel;
+    if(y+r > height)
+      y = height-r;
+    if(y < 0)
+      y = 0;
   }
 }

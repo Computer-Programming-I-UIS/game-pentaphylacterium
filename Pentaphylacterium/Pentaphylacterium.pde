@@ -10,7 +10,7 @@ Características:
   
 ****************************************************/
 
-//Protagonista player;
+Protagonista player;
 
 static Nivel[] niveles;
 static int numNivel = 0;
@@ -24,7 +24,7 @@ void setup() {
   size(1325, 600);
   crearBotones();
   crearNiveles();    //funciones que están en la pestaña Ventanas
-  //player = new Protagonista(width/2, height/2);
+  player = new Protagonista(width/2, height/2);
  
 }
  
@@ -45,9 +45,9 @@ void draw() {
       ayuda();
       break;
     case 4:
-      niveles[numNivel].jugar();
-      //player.mover();
-      //player.display();
+      //niveles[numNivel].jugar();
+      player.mover();
+      player.display();
       opciones();
       break;
   }
@@ -57,7 +57,7 @@ void draw() {
 
 static boolean[] keys = new boolean[7];   //variable para las teclas a usar
 
-void keyPressed() {
+/*void keyPressed() {
 
   if(key == 'w')
     keys[0] = true;
@@ -82,7 +82,7 @@ void keyReleased() {
     keys[3] = false;
   if(key == 'e')  
     keys[6] = false;
-}
+}*/
 
 void mousePressed() {
   if(mouseButton == LEFT)
