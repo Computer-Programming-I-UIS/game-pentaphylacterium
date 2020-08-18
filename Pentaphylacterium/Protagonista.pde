@@ -13,8 +13,7 @@ Protagonista(int _px, int _py, int _vel) { //constructor de la clase
 }
 
   void controles(){
-  
-   if(keys[0] == true && py >= y/48){ //mover arriba
+     if(keys[0] == true && py >= y/48){ //mover arriba
      py -= vel;
      delay(65);
      b++;

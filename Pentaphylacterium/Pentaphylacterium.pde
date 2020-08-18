@@ -22,7 +22,7 @@ void setup() {
   size(1320, 600);
   crearBotones();
   crearNiveles();    //funciones que están en la pestaña Ventanas
-  nivel = new Escenario(44,20,"Nivel1.txt", "objtNivel1.txt");
+  nivel = new Escenario(44,20,"Nivel1.txt", "objtsNivel1.txt", "objtNivel1.txt");
 }
 
 void draw() {
@@ -44,6 +44,8 @@ void draw() {
     case 4:
       nivel.obtenerDatos();
       nivel.crearEscenario();
+      nivel.datosobjeto();
+      nivel.objeto();
       nivel.datosobjetos();
       nivel.objetos();
       niveles[numNivel].jugar();
