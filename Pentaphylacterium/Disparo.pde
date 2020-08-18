@@ -6,39 +6,25 @@ class Disparo {
   Disparo(float _x, float _y, float dirX, float dirY){
     x = _x;
     y = _y;
-    r = 10;
-    
-    PVector vjugador = new PVector(x, y);
-    PVector vmouse = new PVector(dirX, dirY);
-    
-    direccion.set(PVector.sub(vmouse, vjugador));
-    direccion.normalize();
-    direccion.mult(4);
+    r = round(resizeX(12));
+    direccion = getDireccion(dirX, dirY, _x, _y, 7);
   }
   
   void dibujar() {
     stroke(0, 0, 80);
-    fill(180, 108, 255);
+    fill(0, 0, 255);
     rectMode(CENTER);
-    rect(x, y, r, r);
+    rect(x, y, 2*r, r);
+    mover();
   }
   
   void mover() {
     if(!colision) {
-      x += direccion.x;
-      y += direccion.y;
+      x += 2*direccion.x;
+      y += 2*direccion.y;
     } else{
-      r -= 0.5;
-      if(r <= 0){
         destruir();
       }
-    }
-  }
-  
-  void colisionador() {
-    if(x >= width || x+r <= 0 || y >= height || y+r <= 0){
-      colisionDetectada();
-    }
   }
   
   void colisionDetectada() {

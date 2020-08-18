@@ -99,6 +99,18 @@ void oneClick(){
     keys[5] = false;
 }
 
+PVector getDireccion(float x1, float y1, float x2, float y2, float v) {
+  PVector vec1 = new PVector(x1, y1);
+  PVector vec2 = new PVector(x2, y2);
+  PVector dir = new PVector();
+
+  dir.set(PVector.sub(vec1, vec2));
+  dir.normalize();
+  dir.mult(resizeX(v));
+
+  return dir;
+}
+
 float resizeX(float value) {              //función para hacer el resize en X
   float newValue = (width*value)/1920;
   return newValue;

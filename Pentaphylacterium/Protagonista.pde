@@ -15,7 +15,7 @@ Protagonista(int _px, int _py, int _vel) { //constructor de la clase
   void controles(){
      if(keys[0] == true && py >= y/48){ //mover arriba
      py -= vel;
-     delay(65);
+     delay(15);
      b++;
      counter = b;
      if (b == 15) 
@@ -24,7 +24,7 @@ Protagonista(int _px, int _py, int _vel) { //constructor de la clase
  
    if(keys[2] == true && py <= height - 48){ // mover abajo
      py += vel;
-     delay(65);
+     delay(15);
      a++;
      counter = a;
      if (a == 3) 
@@ -33,7 +33,7 @@ Protagonista(int _px, int _py, int _vel) { //constructor de la clase
  
    if(keys[3] == true && px >= 0){ // mover izquierda
      px -= vel;
-     delay(65);
+     delay(15);
      c++;
      counter = c;
      if (c == 7) 
@@ -42,7 +42,7 @@ Protagonista(int _px, int _py, int _vel) { //constructor de la clase
  
    if(keys[1] == true && px <= width - 32){ // mover derecha
      px += vel;
-     delay(65);
+     delay(15);
      d++;
      counter = d;
      if (d == 11)
@@ -70,7 +70,7 @@ Protagonista(int _px, int _py, int _vel) { //constructor de la clase
   
   void disparar() {
     Disparo bala;
-    bala = new Disparo(px, py, mouseX, mouseY);
+    bala = new Disparo(px+12, py+24, mouseX+6, mouseY+12);
     niveles[numNivel].disparo.add(bala);
   }
   

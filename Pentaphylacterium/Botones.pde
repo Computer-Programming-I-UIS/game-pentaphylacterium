@@ -14,6 +14,7 @@ class Boton {
   }
   
 void dibujar() {
+  rectMode(CORNER);
     if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) 
       mouse = true;
     else
