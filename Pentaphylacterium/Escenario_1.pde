@@ -82,8 +82,8 @@ class Escenario {
   void objetos() { // imprime los objetos con los que interacciona
     for (int n = 0 ; n < rows; n++) {
       for(int m = 0 ; m < cols; m++) {
-        if(objetos[m][n] == 'E'){ // imprime los esqueletos
-          copy(tileset,30,90,30,30,(m*30),(n*30),30,30);
+        if(objetos[m][n] == 'E'){ // imprime los hongos
+          copy(tileset,30,60,30,30,(m*30),(n*30),30,30);
         }
         if(objetos[m][n] == 'C'){ // imprime los cristales
           copy(tileset,60,30,30,30,(m*30),(n*30),30,30);
@@ -118,7 +118,7 @@ class Escenario {
     for (int k = 0 ; k < rows; k++) {
       for(int m = 0 ; m < cols; m++) {
         if(objeto[m][k] == 'P'){ // imprime las piedritas
-          copy(tileset,30,30,30,30,(m*30),(k*30),30,30);
+          copy(tileset,30,0,30,30,(m*30),(k*30),30,30);
         }
       }
     }
