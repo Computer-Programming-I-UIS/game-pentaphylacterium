@@ -19,10 +19,10 @@ Boton[] botones;
 Escenario nivel;
  
 void setup() {
-  size(1325, 600);
+  size(1320, 600);
   crearBotones();
   crearNiveles();    //funciones que están en la pestaña Ventanas
-  nivel = new Escenario(44,20,"Nivel1.txt");
+  nivel = new Escenario(44,20,"Nivel1.txt", "objtNivel1.txt");
 }
 
 void draw() {
@@ -44,6 +44,8 @@ void draw() {
     case 4:
       nivel.obtenerDatos();
       nivel.crearEscenario();
+      nivel.datosobjetos();
+      nivel.objetos();
       niveles[numNivel].jugar();
       opciones();
       break;
