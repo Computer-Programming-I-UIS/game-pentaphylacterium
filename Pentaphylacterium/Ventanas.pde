@@ -1,10 +1,10 @@
 void crearBotones(){
   botones = new Boton[6];
-  botones[0] = new Boton(width-resizeX(500), resizeY(50), resizeX(400), resizeY(150), "Nueva Partida");
-  botones[1] = new Boton(width-resizeX(500), resizeY(250), resizeX(400), resizeY(150), "Nivel");
-  botones[2] = new Boton(width-resizeX(500), resizeY(450), resizeX(400), resizeY(150), "Opciones");
-  botones[3] = new Boton(width-resizeX(500), resizeY(650), resizeX(400), resizeY(150), "Ayuda");
-  botones[4] = new Boton(width-resizeX(500), resizeY(850), resizeX(400), resizeY(150), "Salir");
+  botones[0] = new Boton(width-resizeX(1200), resizeY(300), resizeX(400), resizeY(150), "Nueva Partida");
+  botones[1] = new Boton(width-resizeX(1200), resizeY(450), resizeX(400), resizeY(150), "Nivel");
+  botones[2] = new Boton(width-resizeX(1200), resizeY(600), resizeX(400), resizeY(150), "Opciones");
+  botones[3] = new Boton(width-resizeX(1200), resizeY(750), resizeX(400), resizeY(150), "Ayuda");
+  botones[4] = new Boton(width-resizeX(1200), resizeY(900), resizeX(400), resizeY(150), "Salir");
   botones[5] = new Boton(resizeX(200), height - resizeY(250), resizeX(650), resizeY(160), "Atras");
 }
 

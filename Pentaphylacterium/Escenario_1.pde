@@ -1,6 +1,6 @@
 class Escenario {
   //Atributos
-  PImage tileset = loadImage("nivel 1.png");
+  PImage tileset = loadImage("Dungeon01.png");
   int cols;
   int rows;
   char[][] escenario;  //Aquí se almacena la información del escenario
@@ -50,9 +50,12 @@ class Escenario {
   
   void crearEscenario() {
     for (int i = 0 ; i < rows; i++) {
-      for(int j = 0 ; j < cols; j++) {
-        if(escenario[j][i] == 'M'){
+      for(int j = 0 ; j < cols; j++) { 
+        if(escenario[j][i] == 'M'){// imprime el suelo
           copy(tileset,0,0,30,30,(j*30),(i*30),30,30);
+        }
+        if(escenario[j][i] == 'P'){// imprime el puente
+          copy(tileset,30,240,30,30,(j*30),(i*30),30,30);
         }
       }
     }
@@ -82,11 +85,62 @@ class Escenario {
   void objetos() { // imprime los objetos con los que interacciona
     for (int n = 0 ; n < rows; n++) {
       for(int m = 0 ; m < cols; m++) {
-        if(objetos[m][n] == 'E'){ // imprime los hongos
-          copy(tileset,30,60,30,30,(m*30),(n*30),30,30);
+        if(objetos[m][n] == 'H'){ // imprime los hongos
+          copy(tileset,30,0,30,30,(m*30),(n*30),30,30);
         }
         if(objetos[m][n] == 'C'){ // imprime los cristales
-          copy(tileset,60,30,30,30,(m*30),(n*30),30,30);
+          copy(tileset,180,0,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == 'R'){ // imprime las rocas
+          copy(tileset,120,0,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == 'J'){ // imprime el avismo
+          copy(tileset,210,30,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == 'j'){ // imprime el borde del avismo
+          copy(tileset,30,120,30,30,(m*30),(n*30),30,30);
+        }
+        // imprimen los muros 
+        if(objetos[m][n] == 'A'){ 
+          copy(tileset,60,150,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == 'b'){ 
+          copy(tileset,210,60,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == 'B'){ 
+          copy(tileset,150,60,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == 'S'){ 
+          copy(tileset,60,120,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == 's'){ 
+          copy(tileset,90,120,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == 'D'){ 
+          copy(tileset,150,120,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == 'd'){ 
+          copy(tileset,180,120,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == 'P'){ 
+          copy(tileset,150,150,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == 'p'){ 
+          copy(tileset,180,150,30,30,(m*30),(n*30),30,30);
+        }
+        
+        //Imprimen las esquinas del mapa
+        if(objetos[m][n] == '1'){ 
+          copy(tileset,240,120,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == '2'){ 
+          copy(tileset,270,120,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == '3'){ 
+          copy(tileset,240,60,30,30,(m*30),(n*30),30,30);
+        }
+        if(objetos[m][n] == '4'){ 
+          copy(tileset,0,90,30,30,(m*30),(n*30),30,30);
         }
       }
     }
@@ -118,7 +172,7 @@ class Escenario {
     for (int k = 0 ; k < rows; k++) {
       for(int m = 0 ; m < cols; m++) {
         if(objeto[m][k] == 'P'){ // imprime las piedritas
-          copy(tileset,30,0,30,30,(m*30),(k*30),30,30);
+          copy(tileset,90,0,30,30,(m*30),(k*30),30,30);
         }
       }
     }

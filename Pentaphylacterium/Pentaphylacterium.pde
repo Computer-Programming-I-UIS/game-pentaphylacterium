@@ -17,12 +17,14 @@ static int numVentana = 0;
 Boton[] botones;
 
 Escenario nivel;
+PImage inicio;
  
 void setup() {
   size(1320, 600);
   crearBotones();
   crearNiveles();    //funciones que están en la pestaña Ventanas
   nivel = new Escenario(44,20,"Nivel1.txt", "objtsNivel1.txt", "objtNivel1.txt");
+  inicio = loadImage("Inicio.png");
 }
 
 void draw() {
@@ -30,6 +32,7 @@ void draw() {
   
   switch(numVentana){   //sirve para hacer el cambio entre ventanas
     case 0:
+      image(inicio,0,0);
       menu();
       break;
     case 1:
