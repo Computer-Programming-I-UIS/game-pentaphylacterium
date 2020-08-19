@@ -1,14 +1,15 @@
-/****************************************************
+/****************************************************************************************
+                                PENTAPHYLACTERIUM
+
 Autores:
-  *Santiago Gutierrez Valderrama
-  *Luis Fernando Romero Rojas
-
+  *Santiago Gutierrez Valderrama.
+  *Luis Fernando Romero Rojas.
 Descripción:
-  
 
-Características:
-  
-****************************************************/
+Asignatura: Programación de Computadores I.
+Grupo: D2.
+Universidad Industrial de Santanader.
+****************************************************************************************/
 
 static Nivel[] niveles;
 static int numNivel = 0;
