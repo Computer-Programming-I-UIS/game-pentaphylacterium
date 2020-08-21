@@ -1,12 +1,15 @@
 class Disparo {
-  float x, y, vel, r;
+  float x, y;
+  int w, h;
+  float vel;
   PVector direccion = new PVector();
   boolean colision = false;
   
   Disparo(float _x, float _y, float dirX, float dirY){
     x = _x;
     y = _y;
-    r = round(resizeX(12));
+    w = round(resizeX(24));
+    h = round(resizeY(12));
     direccion = getDireccion(dirX, dirY, _x, _y, 7);
   }
   
@@ -14,12 +17,14 @@ class Disparo {
     stroke(0, 0, 80);
     fill(0, 0, 255);
     rectMode(CENTER);
-    rect(x, y, 2*r, r);
+    rect(x, y, w, h);
     mover();
   }
   
   void mover() {
-    if(!colision) {
+    colision = false;
+    colisionDetectada();
+    if(colision == false) {
       x += 2*direccion.x;
       y += 2*direccion.y;
     } else{
@@ -28,11 +33,10 @@ class Disparo {
   }
   
   void colisionDetectada() {
-    for(Disparo bala : niveles[numNivel].disparo) {
-      if(bala == this && colision == false) {
+      if(x + w >= width || x <= w || y + h >= height || y <= 60) {
         colision = true;
-      }
-    }
+    }else
+    colision = false;
   }
   
   void destruir() {

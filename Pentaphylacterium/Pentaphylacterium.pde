@@ -33,11 +33,11 @@ void draw() {
   
   switch(numVentana){   //sirve para hacer el cambio entre ventanas
     case 0:
-      image(inicio,0,0);
+      image(inicio, 0, 0);
       menu();
       break;
     case 1:
-      nivel();
+      niveles();
       break;
     case 2:
       opciones();
@@ -53,7 +53,7 @@ void draw() {
       nivel.datosobjetos();
       nivel.objetos();
       niveles[numNivel].jugar();
-      opciones();
+      ayuda();
       break;
   }
   
@@ -93,7 +93,7 @@ void mousePressed() {
   if(mouseButton == LEFT)
     keys[4] = true;
   if(mouseButton == RIGHT)
-    keys[4] = true;
+    keys[5] = true;
 }
 
 void oneClick(){
