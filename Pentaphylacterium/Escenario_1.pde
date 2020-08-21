@@ -170,9 +170,9 @@ class Escenario {
   
    void objeto() { // imprime los objetos con los que no interacciona
     for (int k = 0 ; k < rows; k++) {
-      for(int m = 0 ; m < cols; m++) {
-        if(objeto[m][k] == 'P'){ // imprime las piedritas
-          copy(tileset,90,0,30,30,(m*30),(k*30),30,30);
+      for(int l = 0 ; l < cols; l++) {
+        if(objeto[l][k] == 'P'){ // imprime las piedritas
+          copy(tileset,90,0,30,30,(l*30),(k*30),30,30);
         }
       }
     }
