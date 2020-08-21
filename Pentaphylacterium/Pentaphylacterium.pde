@@ -43,7 +43,7 @@ void draw() {
       opciones();
       break;
     case 3:
-      ayuda();
+      creditos();
       break;
     case 4:
       nivel.obtenerDatos();
@@ -53,7 +53,7 @@ void draw() {
       nivel.datosobjetos();
       nivel.objetos();
       niveles[numNivel].jugar();
-      ayuda();
+      creditos();
       break;
   }
   

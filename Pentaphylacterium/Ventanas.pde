@@ -2,8 +2,8 @@ void crearBotones(){
   botones = new Boton[11];
   botones[0] = new Boton(width-resizeX(1200), resizeY(320), resizeX(350), resizeY(100), "Nueva Partida");
   botones[1] = new Boton(width-resizeX(1200), resizeY(470), resizeX(350), resizeY(100), "Niveles");
-  botones[2] = new Boton(width-resizeX(1200), resizeY(620), resizeX(350), resizeY(100), "Opciones");
-  botones[3] = new Boton(width-resizeX(1200), resizeY(770), resizeX(350), resizeY(100), "Ayuda");
+  botones[2] = new Boton(width-resizeX(1200), resizeY(620), resizeX(350), resizeY(100), "Instrucciones");
+  botones[3] = new Boton(width-resizeX(1200), resizeY(770), resizeX(350), resizeY(100), "Créditos");
   botones[4] = new Boton(width-resizeX(1200), resizeY(920), resizeX(350), resizeY(100), "Salir");
   botones[5] = new Boton(resizeX(200), height - resizeY(250), resizeX(350), resizeY(100), "Atras");
 
@@ -92,13 +92,21 @@ void opciones(){
   line(width/16 +10, height/2 +60, width/16 +10, height/2 +100);
   line(width/16, height/2 +80, width/16 +10, height/2 +100);
   line(width/16 +20, height/2 +80, width/16 +10, height/2 +100);
+  text("a", width/4 -20, height/2);
+  text("d", width/4 +20, height/2);
+  line(width/4 -50, height/2, width/4 -80, height/2);
+  line(width/4 +50, height/2, width/4 +80, height/2);
+  line(width/4 -60, height/2 -15, width/4 -80, height/2);
+  line(width/4 -60, height/2 +15, width/4 -80, height/2);
+  line(width/4 +60, height/2 -15, width/4 +80, height/2);
+  line(width/4 +60, height/2 +15, width/4 +80, height/2);
   botones[5].dibujar();
   if(botones[5].click()){
     numVentana = 0;
   }
 }
 
-void ayuda(){
+void creditos(){
   botones[5].dibujar();
   if(botones[5].click()){
     numVentana = 0;
