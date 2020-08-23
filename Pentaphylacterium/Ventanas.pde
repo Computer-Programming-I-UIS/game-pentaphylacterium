@@ -1,5 +1,5 @@
 void crearBotones(){
-  botones = new Boton[11];
+  botones = new Boton[14];
   botones[0] = new Boton(width-resizeX(1200), resizeY(320), resizeX(350), resizeY(100), "Nueva Partida");
   botones[1] = new Boton(width-resizeX(1200), resizeY(470), resizeX(350), resizeY(100), "Niveles");
   botones[2] = new Boton(width-resizeX(1200), resizeY(620), resizeX(350), resizeY(100), "Instrucciones");
@@ -12,6 +12,10 @@ void crearBotones(){
   botones[8] = new Boton(resizeX(200), resizeY(500), resizeX(250), resizeY(80), "Nivel 3");
   botones[9] = new Boton(resizeX(200), resizeY(600), resizeX(250), resizeY(80), "Nivel 4");
   botones[10] = new Boton(resizeX(200), resizeY(700), resizeX(250), resizeY(80), "Nivel 5");
+  botones[11] = new Boton(resizeX(40), height - resizeY(100), resizeX(60), resizeY(60), "II");
+  
+  botones[12] = new Boton(width-resizeX(500), resizeY(650), resizeX(400), resizeY(150), "Siguiente Nivel");
+  botones[13] = new Boton(width-resizeX(500), resizeY(850), resizeX(400), resizeY(150), "Menu Principal");
 }
 
 void crearNiveles() {
@@ -110,5 +114,19 @@ void creditos(){
   botones[5].dibujar();
   if(botones[5].click()){
     numVentana = 0;
+  }
+}
+
+void nivelCompletado() {
+  botones[13].dibujar();
+  if (botones[13].click()) {
+    numVentana = 0;
+  }
+
+  botones[12].dibujar();
+  if (botones[12].click()) {
+    numNivel++;
+    constrain(numNivel, 0, 5);
+    numVentana = 4;
   }
 }

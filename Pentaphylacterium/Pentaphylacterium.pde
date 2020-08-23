@@ -54,7 +54,13 @@ void draw() {
       nivel.datosobjetos();
       nivel.objetos();
       niveles[numNivel].jugar();
-      creditos();
+      botones[11].dibujar();
+      if(botones[11].click()){
+        numVentana = 0;
+      }
+      break;
+      case 5:
+        nivelCompletado();
       break;
   }
   

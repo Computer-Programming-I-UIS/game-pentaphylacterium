@@ -6,6 +6,7 @@ class Protagonista {
  PImage sprite = loadImage("Protagonista.png");
  int a = 0 ,b = 12, c = 4, d = 8;
  boolean miraOn;
+ float recarga = 0;
  
 Protagonista(int _px, int _py, int _vel) { //constructor de la clase
   px = _px;
@@ -60,7 +61,10 @@ Protagonista(int _px, int _py, int _vel) { //constructor de la clase
        d=7;
    }
    
-   if(keys[4] == true)
+   if(recarga > 0)
+     recarga -= 0.8;
+   
+   if(keys[4] == true && recarga <= 0)
      disparar();
      
    if(keys[5] == true)
@@ -88,6 +92,7 @@ Protagonista(int _px, int _py, int _vel) { //constructor de la clase
     Disparo bala;
     bala = new Disparo(px+12, py+24, mouseX+6, mouseY+12);
     niveles[numNivel].disparo.add(bala);
+    recarga = 3;
   }
   
   float getpx() {

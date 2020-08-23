@@ -5,6 +5,7 @@ class Nivel {
   boolean ready = false;
   
   ArrayList<Disparo> disparo = new ArrayList();
+  ArrayList<Enemigo> enemigos = new ArrayList();
   
   void jugar(){
     player.dibujar();
@@ -16,5 +17,18 @@ class Nivel {
       bala.dibujar();
       bala.mover();
     }
+    
+    for (int numEne = 0; numEne < enemigos.size(); numEne++) {
+        if (enemigos.get(numEne).getActivo())
+          enemigos.get(numEne).dibujar();
+      }
+    
+    if(player.getpx() <= 21){
+      siguienteNivel();
+    }
+  }
+  
+  void siguienteNivel() {
+    numVentana = 5;
   }
 }
