@@ -4,11 +4,12 @@
 Autores:
   *Santiago Gutierrez Valderrama.
   *Luis Fernando Romero Rojas.
-Descripción:
 
 Asignatura: Programación de Computadores I.
 Grupo: D2.
 Universidad Industrial de Santanader.
+
+Descripción:
 ****************************************************************************************/
 
 static Nivel[] niveles;
