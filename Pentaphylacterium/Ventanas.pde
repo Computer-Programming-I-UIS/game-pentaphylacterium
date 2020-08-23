@@ -118,15 +118,23 @@ void creditos(){
 }
 
 void nivelCompletado() {
-  botones[13].dibujar();
-  if (botones[13].click()) {
-    numVentana = 0;
+  if(numNivel < 5){
+    botones[13].dibujar();
+    if(botones[13].click()) {
+      numVentana = 0;
+    }
+    
+    botones[12].dibujar();
+    if(botones[12].click()) {
+      numNivel++;
+      numVentana = 4;
+    }
   }
+}
 
-  botones[12].dibujar();
-  if (botones[12].click()) {
-    numNivel++;
-    constrain(numNivel, 0, 5);
-    numVentana = 4;
-  }
+void juegoTerminado() {
+    botones[13].dibujar();
+    if(botones[13].click()) {
+      numVentana = 0;
+    }
 }

@@ -62,6 +62,8 @@ void draw() {
       case 5:
         nivelCompletado();
       break;
+      case 6:
+        juegoTerminado();
   }
   
   oneClick();   //función para dar click solo una vez

@@ -29,6 +29,9 @@ class Nivel {
   }
   
   void siguienteNivel() {
-    numVentana = 5;
+    if(numNivel < 4)
+      numVentana = 5;
+    else
+      numVentana = 6;
   }
 }
