@@ -1,16 +1,16 @@
 /****************************************************************************************
-                                PENTAPHYLACTERIUM
-
-Autores:
-  *Santiago Gutierrez Valderrama.
-  *Luis Fernando Romero Rojas.
-
-Asignatura: Programación de Computadores I.
-Grupo: D2.
-Universidad Industrial de Santanader.
-
-Descripción:
-****************************************************************************************/
+ PENTAPHYLACTERIUM
+ 
+ Autores:
+ *Santiago Gutierrez Valderrama.
+ *Luis Fernando Romero Rojas.
+ 
+ Asignatura: Programación de Computadores I.
+ Grupo: D2.
+ Universidad Industrial de Santanader.
+ 
+ Descripción:
+ ****************************************************************************************/
 
 static Nivel[] niveles;
 static int numNivel = 0;
@@ -20,52 +20,50 @@ Boton[] botones;
 
 Escenario nivel;
 PImage inicio;
- 
+
 void setup() {
   size(1320, 600);
   crearBotones();
   crearNiveles();    //funciones que están en la pestaña Ventanas
-  nivel = new Escenario(44,20,"Nivel1.txt", "objtsNivel1.txt", "objtNivel1.txt");
+  nivel = new Escenario(44, 20, 1);
   inicio = loadImage("Inicio.png");
 }
 
 void draw() {
   background(#1E643C);
-  
-  switch(numVentana){   //sirve para hacer el cambio entre ventanas
-    case 0:
-      image(inicio, 0, 0);
-      menu();
-      break;
-    case 1:
-      niveles();
-      break;
-    case 2:
-      opciones();
-      break;
-    case 3:
-      creditos();
-      break;
-    case 4:
-      nivel.obtenerDatos();
-      nivel.crearEscenario();
-      nivel.datosobjeto();
-      nivel.objeto();
-      nivel.datosobjetos();
-      nivel.objetos();
-      niveles[numNivel].jugar();
-      botones[11].dibujar();
-      if(botones[11].click()){
-        numVentana = 0;
-      }
-      break;
-      case 5:
-        nivelCompletado();
-      break;
-      case 6:
-        juegoTerminado();
+
+  switch(numVentana) {   //sirve para hacer el cambio entre ventanas
+  case 0:
+    image(inicio, 0, 0);
+    menu();
+    break;
+  case 1:
+    niveles();
+    break;
+  case 2:
+    opciones();
+    break;
+  case 3:
+    creditos();
+    break;
+  case 4:
+    nivel.cargarNivel();
+    nivel.crearEscenario();
+    nivel.objeto();
+    nivel.objetos();
+    niveles[numNivel].jugar(nivel.pos_interacciones,nivel.numElemInt);
+    botones[11].dibujar();
+    if (botones[11].click()) {
+      numVentana = 0;
+    }
+    break;
+  case 5:
+    nivelCompletado();
+    break;
+  case 6:
+    juegoTerminado();
   }
-  
+
   oneClick();   //función para dar click solo una vez
 }
 
@@ -73,42 +71,42 @@ static boolean[] keys = new boolean[7];   //variable para las teclas a usar
 
 void keyPressed() {
 
-  if(key == 'w')
+  if (key == 'w')
     keys[0] = true;
-  if(key == 'd')  
+  if (key == 'd')  
     keys[1] = true;
-  if(key == 's')
+  if (key == 's')
     keys[2] = true;
-  if(key == 'a')  
+  if (key == 'a')  
     keys[3] = true;
-  if(key == 'e')  
+  if (key == 'e')  
     keys[6] = true;
 }
 
 void keyReleased() {
-  if(key == 'w')
+  if (key == 'w')
     keys[0] = false;
-  if(key == 'd')
+  if (key == 'd')
     keys[1] = false;
-  if(key == 's')
+  if (key == 's')
     keys[2] = false;
-  if(key == 'a')  
+  if (key == 'a')  
     keys[3] = false;
-  if(key == 'e')  
+  if (key == 'e')  
     keys[6] = false;
 }
 
 void mousePressed() {
-  if(mouseButton == LEFT)
+  if (mouseButton == LEFT)
     keys[4] = true;
-  if(mouseButton == RIGHT)
+  if (mouseButton == RIGHT)
     keys[5] = true;
 }
 
-void oneClick(){
-  if(keys[4])
+void oneClick() {
+  if (keys[4])
     keys[4] = false;
-  if(keys[5])
+  if (keys[5])
     keys[5] = false;
 }
 

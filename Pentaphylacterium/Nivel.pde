@@ -4,11 +4,20 @@ class Nivel {
   Enemigo enemigo = new Enemigo(3*width/4, height/2, 20);
   boolean ready = false;
   
+  // Escenario escenario;
+  
   ArrayList<Disparo> disparo = new ArrayList();
   ArrayList<Enemigo> enemigos = new ArrayList();
   
-  void jugar(){
+  void jugar(int[][] obstaculos, int numElemInt){
     player.dibujar();
+    
+    /* PARA CUANDO HAYAN UNIDO EL ESCENARIO CON EL JUGADOR
+    
+    player.verificarObstaculos(escenario.pos_interacciones, escenario.numElemInt);
+    
+    */
+    player.verificarObstaculos(obstaculos,numElemInt);
     player.controles();
     enemigo.dibujar();
     
