@@ -9,7 +9,8 @@
  Grupo: D2.
  Universidad Industrial de Santanader.
  
- Descripción:
+ Descripción: Recorre las peligrosas mazmorras en búsqueda del legendario 
+              Pentaphylacterium mientras te proteges de peligrosos enemigos.
  ****************************************************************************************/
 
 static Nivel[] niveles;
