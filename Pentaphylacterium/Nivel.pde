@@ -1,7 +1,7 @@
 class Nivel {
   
-  Protagonista player = new Protagonista(width/2, height/2, 14);
-  Enemigo enemigo = new Enemigo(3*width/4, height/2, 20);
+  Protagonista player = new Protagonista(width/2, height/2, 8);
+  Enemigo enemigo = new Enemigo(3*width/4, height/2, 20, 20);
   boolean ready = false;
   
   // Escenario escenario;
@@ -32,9 +32,11 @@ class Nivel {
           enemigos.get(numEne).dibujar();
       }
     
-    if(player.getpx() <= 21){
+    if(player.getpx() <= width/4){
       siguienteNivel();
     }
+    
+    //colisiones();
   }
   
   void siguienteNivel() {
@@ -42,5 +44,15 @@ class Nivel {
       numVentana = 5;
     else
       numVentana = 6;
+    nivel1.stop();
+    nivelCompletado.play();
+  }
+  
+  void colisiones() {
+    for (int i = 0; i < enemigos.size(); i++) {
+      //si el enemigo toca al jugador
+      if (enemigos.get(i).getColision(player.getpx(), player.getpy(), 32, 48))
+        juegoTerminado();
+  }
   }
 }

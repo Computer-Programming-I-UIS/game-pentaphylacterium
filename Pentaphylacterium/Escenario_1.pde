@@ -31,7 +31,6 @@ class Escenario {
 
   //Métodos
 
-
   void cargarNivel() {
     if (nivelNoEstaCargado) { //Si el nivel NO ha sido cargado
       archivoEscenario = "data/niveles/" + str(nivel) + "/escenario.txt";  // "data/niveles/1/escenario.txt"
@@ -40,7 +39,7 @@ class Escenario {
       leerEscenario();
       leerObjetos();
       leerObjeto(); 
-      println("Me ejecuté bro");
+      println("Game Loaded");
       nivelNoEstaCargado = false;
     }
 

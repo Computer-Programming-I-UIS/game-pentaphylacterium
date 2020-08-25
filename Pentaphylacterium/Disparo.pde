@@ -33,10 +33,10 @@ class Disparo {
   }
   
   void colisionDetectada() {
-      if(x + w >= width || x <= w || y + h >= height || y <= 60) {
-        colision = true;
-    }else
-    colision = false;
+    if(x + w >= width || x <= w || y + h >= height || y <= 60)
+      colision = true;
+    else
+      colision = false;
   }
   
   void destruir() {
@@ -44,5 +44,18 @@ class Disparo {
       if(niveles[numNivel].disparo.get(i) == this)
         niveles[numNivel].disparo.remove(i);
     }
+  }
+  
+    float getx() {
+    return x;
+  }
+  float gety() {
+    return y;
+  }
+  float getw() {
+    return w;
+  }
+  float geth() {
+    return h;
   }
 }

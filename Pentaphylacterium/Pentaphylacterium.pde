@@ -23,16 +23,17 @@ PImage inicio;
 
 void setup() {
   size(1320, 600);
-  crearBotones();
-  crearNiveles();    //funciones que están en la pestaña Ventanas
   nivel = new Escenario(44, 20, 1);
   inicio = loadImage("Inicio.png");
+  crearBotones();
+  crearNiveles();    
+  cargarAudio();    //funciones que están en la pestaña Ventanas
 }
 
 void draw() {
   background(#1E643C);
 
-  switch(numVentana) {   //sirve para hacer el cambio entre ventanas
+  switch(numVentana) {   //cambio entre ventanas
   case 0:
     image(inicio, 0, 0);
     menu();
@@ -65,6 +66,8 @@ void draw() {
   }
 
   oneClick();   //función para dar click solo una vez
+  
+  musicSystem();
 }
 
 static boolean[] keys = new boolean[7];   //variable para las teclas a usar

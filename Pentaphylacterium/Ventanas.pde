@@ -1,3 +1,9 @@
+import processing.sound.*;
+
+SoundFile nivel1;
+SoundFile nivelCompletado;
+SoundFile s_recoger;
+
 void crearBotones(){
   botones = new Boton[14];
   botones[0] = new Boton(width-resizeX(1200), resizeY(320), resizeX(350), resizeY(100), "Nueva Partida");
@@ -16,6 +22,20 @@ void crearBotones(){
   
   botones[12] = new Boton(width-resizeX(500), resizeY(650), resizeX(400), resizeY(150), "Siguiente Nivel");
   botones[13] = new Boton(width-resizeX(500), resizeY(850), resizeX(400), resizeY(150), "Menu Principal");
+}
+
+void cargarAudio() {
+  nivel1 = new SoundFile(this, "hunters.mp3");
+  nivelCompletado = new SoundFile(this, "win.mp3");
+  
+  s_recoger = new SoundFile(this, "pick.mp3");
+}
+
+void musicSystem() {
+  if (!nivel1.isPlaying() && numVentana == 0) {
+    nivel1.stop();
+    nivel1.play();
+  }
 }
 
 void crearNiveles() {

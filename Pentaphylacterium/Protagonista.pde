@@ -8,8 +8,6 @@ class Protagonista {
   boolean miraOn;
   float recarga = 0;
 
-
-
   boolean objetoArriba = false;
   boolean objetoAbajo = false;
   boolean objetoIzquierda = false;
@@ -117,11 +115,10 @@ class Protagonista {
   }
 
   void dibujar() { 
-    if (miraOn) {
-      //apuntar
+    if (miraOn) { //puntero
       float angle = atan2(mouseY - py, mouseX - px);
-      float ax = px + 1000*cos(angle);
-      float by = py + 1000*sin(angle);
+      float ax = px + 2000*cos(angle);
+      float by = py + 2000*sin(angle);
       stroke(255, 0, 0, 125);
       strokeWeight(3);
       line(px+12, py+24, ax, by);
