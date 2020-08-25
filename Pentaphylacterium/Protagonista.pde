@@ -26,11 +26,11 @@ class Protagonista {
     int cnt3 = 0;
     int cnt4 = 0;
     
-    for (int n = 0; n < numElemInt; n++) {
-      if (obstaculos[0][n] < px && obstaculos[0][n] + 30 > px && obstaculos[1][n] > py && obstaculos[1][n] < py+48+vel) { // deteccion de elementos abajo
+   for (int n = 0; n < numElemInt; n++) {
+      if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] > py && obstaculos[1][n] < py+48+vel) { // deteccion de elementos abajo
         cnt ++;
       } 
-      if (obstaculos[0][n] < px && obstaculos[0][n] + 30 > px && obstaculos[1][n] + 30 < py+30 && obstaculos[1][n] + 30 > py+30-vel) { // deteccion de elementos arriba
+      if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] + 30 < py+48 && obstaculos[1][n] + 30 > py+36-vel) { // deteccion de elementos arriba
         cnt2 ++;
       }
      
@@ -69,7 +69,7 @@ class Protagonista {
     else
       cvel = vel;
 
-    if (keys[0] == true && py >= y/48 + 60 && !objetoArriba) { //mover arriba
+    if (keys[0] == true  && !objetoArriba) { //mover arriba
       py -= cvel;
       delay(15);
       b++;
@@ -78,7 +78,7 @@ class Protagonista {
         b = 11;
     }
 
-    if (keys[2] == true && py <= height-70 && !objetoAbajo) { // mover abajo
+    if (keys[2] == true  && !objetoAbajo) { // mover abajo
       py += vel;
       delay(15);
       a++;
@@ -87,7 +87,7 @@ class Protagonista {
         a = -1;
     }
 
-    if (keys[3] == true && px >= 20 && !objetoIzquierda) { // mover izquierda
+    if (keys[3] == true  && !objetoIzquierda) { // mover izquierda
       px -= vel;
       delay(15);
       c++;
@@ -96,7 +96,7 @@ class Protagonista {
         c = 3;
     }
 
-    if (keys[1] == true && px <= width - 40 && !objetoDerecha) { // mover derecha
+    if (keys[1] == true  && !objetoDerecha) { // mover derecha
       px += vel;
       delay(15);
       d++;
