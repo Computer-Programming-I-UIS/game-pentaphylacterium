@@ -5,6 +5,7 @@ class Disparo {
   PVector direccion = new PVector();
   boolean colision = false;
   
+    //Constructor
   Disparo(float _x, float _y, float dirX, float dirY){
     x = _x;
     y = _y;
@@ -13,6 +14,7 @@ class Disparo {
     direccion = getDireccion(dirX, dirY, _x, _y, 7);
   }
   
+    //Método para dibujar
   void dibujar() {
     stroke(0, 0, 80);
     fill(0, 0, 255);
@@ -21,6 +23,7 @@ class Disparo {
     mover();
   }
   
+    //Método que controla el movimiento
   void mover() {
     colision = false;
     colisionDetectada();
@@ -32,6 +35,7 @@ class Disparo {
       }
   }
   
+    //Método para la colision con las paredes
   void colisionDetectada() {
     if(x + w >= width || x <= w || y + h >= height || y <= 60)
       colision = true;
@@ -39,6 +43,7 @@ class Disparo {
       colision = false;
   }
   
+    //Método para destruir los disparos
   void destruir() {
     for(int i = 0; i < niveles[numNivel].disparo.size(); i++) {
       if(niveles[numNivel].disparo.get(i) == this)
@@ -46,7 +51,8 @@ class Disparo {
     }
   }
   
-    float getx() {
+    //Funciones get
+  float getx() {
     return x;
   }
   float gety() {

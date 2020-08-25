@@ -4,7 +4,7 @@ class Boton {
   String texto; 
   boolean mouse;
   
-  
+    //Constructor
   Boton (float _x, float _y, float _w, float _h, String _t){
     x = _x;
     y = _y;
@@ -13,6 +13,7 @@ class Boton {
     texto = _t;
   }
   
+    //Método para dibujar
 void dibujar() {
   rectMode(CORNER);
     if (mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h) 
@@ -41,6 +42,7 @@ void dibujar() {
     }
   }
   
+    //Detecta si el mouse está sobre el botón
   boolean mouse(){
     if(mouseX >= x && mouseX <= x+w && mouseY >= y && mouseY <= y+h){
       return true;
@@ -49,6 +51,7 @@ void dibujar() {
     }
   }
   
+    //Detecta si se hace click
   boolean click() {
     if(mouse && keys[4]){
       return true;

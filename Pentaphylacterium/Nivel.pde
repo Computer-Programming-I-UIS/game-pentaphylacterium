@@ -12,7 +12,7 @@ class Nivel {
   void jugar(int[][] obstaculos, int numElemInt){
     player.dibujar();
     
-    /* PARA CUANDO HAYAN UNIDO EL ESCENARIO CON EL JUGADOR
+    /* UNIR EL ESCENARIO CON EL JUGADOR
     
     player.verificarObstaculos(escenario.pos_interacciones, escenario.numElemInt);
     
@@ -36,7 +36,7 @@ class Nivel {
       siguienteNivel();
     }
     
-    //colisiones();
+    colisiones();
   }
   
   void siguienteNivel() {

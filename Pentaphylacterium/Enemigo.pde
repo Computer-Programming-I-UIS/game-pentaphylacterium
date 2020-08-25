@@ -4,6 +4,7 @@ class Enemigo {
   int numEnemigos;
   boolean activo;
   
+    //Constructor
   Enemigo(float _x, float _y, float _vel, int _numEne) {
     ipx = _x;
     ipy = _y;
@@ -14,6 +15,7 @@ class Enemigo {
     w = h = random(resizeX(40), resizeX(100));
   }
   
+    //Método para dibujar
   void dibujar() {
     PVector direction = getDireccion(niveles[numNivel].player.getpx(), niveles[numNivel].player.getpy(), px, py, vel);
     noStroke();

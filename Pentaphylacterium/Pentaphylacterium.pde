@@ -68,7 +68,7 @@ void draw() {
 
   oneClick();   //función para dar click solo una vez
   
-  musicSystem();
+  musicSystem();  //activación del sonido
 }
 
 static boolean[] keys = new boolean[7];   //variable para las teclas a usar
@@ -114,7 +114,7 @@ void oneClick() {
     keys[5] = false;
 }
 
-PVector getDireccion(float x1, float y1, float x2, float y2, float v) {
+PVector getDireccion(float x1, float y1, float x2, float y2, float v) {  //funcion para obtener direccion
   PVector vec1 = new PVector(x1, y1);
   PVector vec2 = new PVector(x2, y2);
   PVector dir = new PVector();

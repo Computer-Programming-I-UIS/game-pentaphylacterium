@@ -13,7 +13,8 @@ class Protagonista {
   boolean objetoIzquierda = false;
   boolean objetoDerecha = false;
 
-  Protagonista(int _px, int _py, int _vel) { //constructor de la clase
+    //Constructor
+  Protagonista(int _px, int _py, int _vel) {
     px = _px;
     py = _py;
     vel = _vel;
