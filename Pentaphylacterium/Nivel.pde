@@ -19,7 +19,7 @@ class Nivel {
     */
     player.verificarObstaculos(obstaculos,numElemInt);
     player.controles();
-    enemigo.dibujar();
+    //enemigo.dibujar();
     
     for(int numDisparos = 0; numDisparos < disparo.size(); numDisparos ++){
       Disparo bala = disparo.get(numDisparos);
