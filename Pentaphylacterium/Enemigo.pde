@@ -5,13 +5,12 @@ class Enemigo {
   boolean activo;
   
     //Constructor
-  Enemigo(float _x, float _y, float _vel, int _numEne) {
-    ipx = _x;
-    ipy = _y;
-    px = _x;
-    py = _y;
+  Enemigo(float _x, float _y, float _vel) {
+    ipx = _x + random(150, 250);
+    ipy = _y + random(150, 250);
+    px = ipx;
+    py = ipy;
     vel = _vel;
-    numEnemigos = _numEne;
     w = h = random(resizeX(40), resizeX(100));
   }
   
@@ -26,15 +25,15 @@ class Enemigo {
     py += direction.y;
   }
   
-  void destruir() {
+  /*void destruir() {
     for (int i = 0; i < niveles[numNivel].enemigos.size(); i++) {
       if (niveles[numNivel].enemigos.get(i) == this)
         niveles[numNivel].enemigos.remove(i);
     }
-  }
+  }*/
   
   boolean getColision(float x, float y, float W, float H) {
-    if (x + W > px && x - W < px + w && y + H > py && y - h < py + h)
+    if (x + W > px && x - W < px + w && y + H > py && y - H < py + h)
       return true;
     else
       return false;
