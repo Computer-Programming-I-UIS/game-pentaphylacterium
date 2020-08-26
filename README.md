@@ -1,9 +1,11 @@
 # Pentaphylacterium
 
-### Descripción
-Ayuda al intrépido explorador a surcar las laberínticas y peligrosas mazmorras llenas de espectros en búsqueda del mítico talismán, el legendario Pentaphylacterium codiciado por todos los cazatesoros.
-
 ![./Menu.png](./Menu.png)
+
+### Descripción
+Ayuda al intrépido explorador a surcar las laberínticas y peligrosas mazmorras llenas de espectros en búsqueda de los fragmentos perdidos del mítico talismán, el legendario Pentaphylacterium codiciado por todos los cazatesoros.
+
+![./Historia.png](./Historia.png)
 
 ### Controles
 Controla a tu personaje con las letras a, s, d, w del teclado y dispara rayos de luz con el click izquierdo del mouse para ahuyentar a los espectros, también puedes activar una mira para mejorar tu precisión.
