@@ -21,7 +21,7 @@ PImage GameOver;
 
 //Método para crear los botones.
 void crearBotones() {
-  botones = new Boton[15];
+  botones = new Boton[16];
   botones[0] = new Boton(width-resizeX(1200), resizeY(320), resizeX(350), resizeY(100), "Nueva Partida");
   botones[1] = new Boton(width-resizeX(1200), resizeY(470), resizeX(350), resizeY(100), "Niveles");
   botones[2] = new Boton(width-resizeX(1200), resizeY(620), resizeX(350), resizeY(100), "Instrucciones");
@@ -39,6 +39,7 @@ void crearBotones() {
   botones[12] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Siguiente Nivel");
   botones[13] = new Boton(width-resizeX(500), resizeY(850), resizeX(350), resizeY(100), "Menu Principal");
   botones[14] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Reintentar");
+  botones[15] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Continuar");
 }
 
 //Método para cargar los audios
@@ -64,6 +65,7 @@ void cargarImagenes() {
 //Método para controlar la música
 void musicSystem() {
   if (!intro.isPlaying() && numVentana == 0) {
+    nivel1.stop();
     die.stop();
     intro.stop();
     intro.play();
@@ -174,12 +176,12 @@ void creditos() {
   text(" APOYO E INSTRUCCION", 650, y+285);
   text(" Alex Julian Mantilla Rios. Estudiante de Ing. Electronica UIS", 650, y+320);
   text(" Camilo Eduardo Rojas Ortiz. Docente UIS", 650, y+355);
-  
-   y--;
+
+  y--;
   botones[5].dibujar();
-  
+
   if (y+355<0) y=610;
-  
+
   if (botones[5].click()) {
     s_click.play();
     numVentana = 0;
@@ -218,6 +220,19 @@ void nivelCompletado() {
 
 void juegoTerminado() {
   image(fondo, 0, 0);
+  intro.stop();
+  botones[13].dibujar();
+  if (botones[13].click()) {
+    numVentana = 0;
+  }
+}
+
+void pausa() {
+  image(fondo, 0, 0);
+  botones[15].dibujar();
+  if (botones[14].click()) {
+    numVentana = 4;
+  }
   botones[13].dibujar();
   if (botones[13].click()) {
     numVentana = 0;

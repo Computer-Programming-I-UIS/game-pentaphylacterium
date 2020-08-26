@@ -1,6 +1,6 @@
 class Nivel {
 
-  Protagonista player = new Protagonista(33*width/36, height/2, 8);
+  Protagonista player = new Protagonista(32*width/36, height/2, 8);
   Enemigo[] enemigos;
   int enemigosActivos = 1;
   int tNuevoEnemigo_ms = 10000;
@@ -14,8 +14,8 @@ class Nivel {
     enemigos = new Enemigo[numEnemigos];
     for (int i = 0; i < numEnemigos; i++) {
       float aleatorio = random(0, 1);
-      if (aleatorio < 0.5) enemigos[i] = new Enemigo(width, round(height/2 + random(-500, 500)), 30);
-      else enemigos[i] = new Enemigo(0, round(height/2 + random(-500, 500)), 30);
+      if (aleatorio < 0.5) enemigos[i] = new Enemigo(width, round(height/2 + random(-500, 500)), 24);
+      else enemigos[i] = new Enemigo(0, round(height/2 + random(-500, 500)), 24);
     }
   }
 
@@ -84,14 +84,14 @@ class Nivel {
         numVentana = 7;
         nivel1.stop();
         die.play();
-        player.px = 33*width/36;
+        player.px = 32*width/36;
         player.py = height/2;
         enemigosActivos = 0;
         float aleatorio = random(0, 1);
         if (aleatorio < 0.5)
           enemigos[i].px = 0;
         else
-          enemigos[i].px = width;
+          enemigos[i].px = width + 250;
         enemigos[i].py = round(height/2 + random(-500, 500));
       }
     }

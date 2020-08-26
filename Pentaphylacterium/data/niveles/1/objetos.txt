@@ -12,7 +12,7 @@ B H            R                     C     b
 B               R           RJJJJR   C     b
 B     R          R          CJJJJ    C     b
 B                R          CJJJJ          b
-B         R    R            CJJJJ          b
+B         R     R           CJJJJ          b
 B                           CJJJJ          b
 B H H                       CJJJJ  R       b
 B  H       R                CJJJJ          b

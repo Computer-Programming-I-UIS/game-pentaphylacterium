@@ -56,7 +56,7 @@ void draw() {
     niveles[numNivel].jugar(nivel.pos_interacciones, nivel.numElemInt);
     botones[11].dibujar();
     if (botones[11].click()) {
-      numVentana = 0;
+      numVentana = 8;
     }
     break;
   case 5:
@@ -64,8 +64,13 @@ void draw() {
     break;
   case 6:
     juegoTerminado();
+    break;
   case 7:
     gameOver();
+    break;
+  case 8:
+    pausa();
+    break;
   }
 
   oneClick();   //función para dar click solo una vez
