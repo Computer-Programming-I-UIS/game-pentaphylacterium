@@ -18,6 +18,7 @@ PImage tileset;
 PImage cambioNivel;
 PImage menuNiveles;
 PImage GameOver;
+PImage mapa;
 
 //Método para crear los botones.
 void crearBotones() {
@@ -61,6 +62,7 @@ void cargarImagenes() {
   cambioNivel = loadImage("cambio.png");
   menuNiveles = loadImage("niveles.png");
   GameOver = loadImage("Gameover.png");
+  mapa = loadImage("Historia.png");
 }
 //Método para controlar la música
 void musicSystem() {

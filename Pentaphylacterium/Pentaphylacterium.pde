@@ -45,7 +45,7 @@ void draw() {
     opciones();
     break;
   case 3:
-    image(fondo, 0, 0);
+    image(mapa, 0, 0);
     creditos();
     break;
   case 4:
