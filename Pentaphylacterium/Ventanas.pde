@@ -7,6 +7,7 @@ SoundFile s_recoger;
 SoundFile s_click;
 SoundFile intro;
 SoundFile die;
+int y=610;
 
 //Llama a todos los objetos de la clase PImage
 PImage inicio;
@@ -162,10 +163,26 @@ void opciones() {
 }
 
 void creditos() {
+  
+  text(" PENTAPHYLACTERIUM", 650, y);
+  text(" DESARROLLO Y PRODUCCION", 650, y+60);
+  text(" Luis Fernando Romero Rojas", 650, y+95);
+  text(" Santiago Gutierrez Valderrama", 650, y+130);
+  text(" COLABORACION MUSICAL", 650, y+190);
+  text(" Camila Andrea Gómez Pérez. Estudiante de música UIS", 650, y+225);
+  text(" APOYO E INSTRUCCION", 650, y+285);
+  text(" Alex Julian Mantilla Rios. Estudiante de Ing. Electronica UIS", 650, y+320);
+  text(" Camilo Eduardo Rojas Ortiz. Docente UIS", 650, y+355);
+  
+   y--;
   botones[5].dibujar();
+  
+  if (y+355<0) y=610;
+  
   if (botones[5].click()) {
     s_click.play();
     numVentana = 0;
+    y=610;
   }
 }
 
