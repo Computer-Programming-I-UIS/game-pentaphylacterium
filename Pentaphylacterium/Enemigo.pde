@@ -3,8 +3,8 @@ class Enemigo {
   float px, py, w, h, vel;
   int numEnemigos;
   boolean activo;
-  
-    //Constructor
+
+  //Constructor
   Enemigo(int _x, int _y, int _vel) {
     ipx = _x;
     ipy = _y;
@@ -13,8 +13,8 @@ class Enemigo {
     vel = _vel;
     w = h = random(resizeX(50), resizeX(120));
   }
-  
-    //Método para dibujar
+
+  //Método para dibujar
   void dibujar() {
     PVector direction = getDireccion(niveles[numNivel].player.getpx(), niveles[numNivel].player.getpy(), px, py, vel);
     noStroke();
@@ -24,26 +24,19 @@ class Enemigo {
     px += direction.x;
     py += direction.y;
   }
-  
-  /*void destruir() {
-    for (int i = 0; i < niveles[numNivel].enemigos.size(); i++) {
-      if (niveles[numNivel].enemigos.get(i) == this)
-        niveles[numNivel].enemigos.remove(i);
-    }
-  }*/
-  
+
   boolean getColision(float x, float y, float W, float H) {
     if (x + W/2 > px && x - W/2 < px + w && y + H/2 > py && y - H/2 < py + h)
       return true;
     else
       return false;
   }
-  
+
   boolean getActivo() {
     return activo;
   }
-  
-    float getpx() {
+
+  float getpx() {
     return px;
   }
 
@@ -58,7 +51,7 @@ class Enemigo {
   float geth() {
     return h;
   }
-  
+
   float getnumEne() {
     return numEnemigos;
   }

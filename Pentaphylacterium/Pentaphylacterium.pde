@@ -10,13 +10,12 @@
  Universidad Industrial de Santanader.
  
  Descripción: Recorre las peligrosas mazmorras en búsqueda del legendario 
-              Pentaphylacterium mientras te proteges de peligrosos enemigos.
+ Pentaphylacterium mientras te proteges de peligrosos enemigos.
  ****************************************************************************************/
 
 static Nivel[] niveles;
 static int numNivel = 0;
 static int numVentana = 0;
-//Bloque obstaculo;
 Boton[] botones;
 
 Escenario nivel;
@@ -55,7 +54,7 @@ void draw() {
     nivel.crearEscenario();
     nivel.objeto();
     nivel.objetos();
-    niveles[numNivel].jugar(nivel.pos_interacciones,nivel.numElemInt);
+    niveles[numNivel].jugar(nivel.pos_interacciones, nivel.numElemInt);
     botones[11].dibujar();
     if (botones[11].click()) {
       numVentana = 0;
@@ -69,7 +68,7 @@ void draw() {
   }
 
   oneClick();   //función para dar click solo una vez
-  
+
   musicSystem();  //activación del sonido
 }
 

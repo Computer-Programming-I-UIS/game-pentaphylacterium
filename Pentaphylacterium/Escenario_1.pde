@@ -1,6 +1,5 @@
 class Escenario {
   //Atributos
-  PImage tileset = loadImage("Dungeon01.png");
   int cols;
   int rows;
   char[][] escenario;  //Aquí se almacena la información del escenario

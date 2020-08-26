@@ -4,15 +4,15 @@ class Protagonista {
   int vel, cvel;
   int counter;
   int a = 0, b = 12, c = 4, d = 8;
-  boolean miraOn;
   float recarga = 0;
 
+  boolean miraOn;
   boolean objetoArriba = false;
   boolean objetoAbajo = false;
   boolean objetoIzquierda = false;
   boolean objetoDerecha = false;
 
-    //Constructor
+  //Constructor
   Protagonista(int _px, int _py, int _vel) {
     px = _px;
     py = _py;
@@ -24,15 +24,14 @@ class Protagonista {
     int cnt2 = 0;
     int cnt3 = 0;
     int cnt4 = 0;
-    
-   for (int n = 0; n < numElemInt; n++) {
+
+    for (int n = 0; n < numElemInt; n++) {
       if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] > py && obstaculos[1][n] < py+48+vel) { // deteccion de elementos abajo
         cnt ++;
       } 
       if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] + 30 < py+48 && obstaculos[1][n] + 30 > py+36-vel) { // deteccion de elementos arriba
         cnt2 ++;
       }
-     
     }
     for (int m = 0; m < numElemInt; m++) {
       if (obstaculos[0][m] < px+32+vel && obstaculos[0][m] + 30 > px+32+vel && obstaculos[1][m] +48 > py+44 && obstaculos[1][m] < py+48) {// deteccion de elementos derecha
@@ -41,21 +40,19 @@ class Protagonista {
       if (obstaculos[0][m] + 30 > px-vel && obstaculos[0][m] < px-vel && obstaculos[1][m] + 48 > py+44 && obstaculos[1][m] < py+48) {// deteccion de elementos izquierda
         cnt4 ++;
       }
-     
     }
-    
-    if(cnt >0) objetoAbajo = true;
+
+    if (cnt >0) objetoAbajo = true;
     else objetoAbajo = false;
-    
-    if(cnt2 >0) objetoArriba = true;
+
+    if (cnt2 >0) objetoArriba = true;
     else objetoArriba = false;
-    
-    if(cnt3 >0) objetoDerecha = true;
+
+    if (cnt3 >0) objetoDerecha = true;
     else objetoDerecha = false;
-    
-    if(cnt4 >0) objetoIzquierda = true;
+
+    if (cnt4 >0) objetoIzquierda = true;
     else objetoIzquierda = false;
-    
   }
 
   void controles() {
@@ -128,8 +125,8 @@ class Protagonista {
     x=(counter%4)*32;
     y=(counter/4)*48;
     copy(sprite, x, y, 32, 48, px, py, 32, 48);
-    
-    text(int(objetoAbajo),100,100);
+
+    text(int(objetoAbajo), 100, 100);
   }
 
   void disparar() {
