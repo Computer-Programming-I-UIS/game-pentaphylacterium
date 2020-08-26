@@ -1,7 +1,6 @@
 class Enemigo {
   float ipx, ipy;
   float px, py, w, h, vel;
-  int numEnemigos;
   boolean activo;
 
   //Constructor
@@ -52,7 +51,7 @@ class Enemigo {
     return h;
   }
 
-  float getnumEne() {
+  /*float getnumEne() {
     return numEnemigos;
-  }
+  }*/
 } 

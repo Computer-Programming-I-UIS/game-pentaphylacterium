@@ -126,7 +126,7 @@ class Protagonista {
     y=(counter/4)*48;
     copy(sprite, x, y, 32, 48, px, py, 32, 48);
 
-    text(int(objetoAbajo), 100, 100);
+    println(int(objetoAbajo));
   }
 
   void disparar() {

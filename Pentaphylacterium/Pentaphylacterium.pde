@@ -4,6 +4,7 @@
  Autores:
  *Santiago Gutierrez Valderrama.
  *Luis Fernando Romero Rojas.
+ Colaboración: Camila Andrea Gómez Pérez. Estudiante de música UIS.
  
  Asignatura: Programación de Computadores I.
  Grupo: D2.
@@ -38,11 +39,9 @@ void draw() {
     menu();
     break;
   case 1:
-    image(fondo, 0, 0);
     niveles();
     break;
   case 2:
-    image(instrucciones, 0, 0);
     opciones();
     break;
   case 3:
@@ -65,6 +64,8 @@ void draw() {
     break;
   case 6:
     juegoTerminado();
+  case 7:
+    gameOver();
   }
 
   oneClick();   //función para dar click solo una vez

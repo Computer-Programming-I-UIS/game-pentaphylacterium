@@ -5,6 +5,8 @@ SoundFile nivel1;
 SoundFile nivelCompletado;
 SoundFile s_recoger;
 SoundFile s_click;
+SoundFile intro;
+SoundFile die;
 
 //Llama a todos los objetos de la clase PImage
 PImage inicio;
@@ -12,10 +14,13 @@ PImage instrucciones;
 PImage sprite;
 PImage fondo;
 PImage tileset;
+PImage cambioNivel;
+PImage menuNiveles;
+PImage GameOver;
 
 //Método para crear los botones.
 void crearBotones() {
-  botones = new Boton[14];
+  botones = new Boton[15];
   botones[0] = new Boton(width-resizeX(1200), resizeY(320), resizeX(350), resizeY(100), "Nueva Partida");
   botones[1] = new Boton(width-resizeX(1200), resizeY(470), resizeX(350), resizeY(100), "Niveles");
   botones[2] = new Boton(width-resizeX(1200), resizeY(620), resizeX(350), resizeY(100), "Instrucciones");
@@ -23,22 +28,25 @@ void crearBotones() {
   botones[4] = new Boton(width-resizeX(1200), resizeY(770), resizeX(350), resizeY(100), "Salir");
   botones[5] = new Boton(resizeX(100), height - resizeY(150), resizeX(250), resizeY(80), "Atrás");
 
-  botones[6] = new Boton(resizeX(200), resizeY(300), resizeX(250), resizeY(80), "Nivel 1");
-  botones[7] = new Boton(resizeX(200), resizeY(400), resizeX(250), resizeY(80), "Nivel 2");
-  botones[8] = new Boton(resizeX(200), resizeY(500), resizeX(250), resizeY(80), "Nivel 3");
-  botones[9] = new Boton(resizeX(200), resizeY(600), resizeX(250), resizeY(80), "Nivel 4");
-  botones[10] = new Boton(resizeX(200), resizeY(700), resizeX(250), resizeY(80), "Nivel 5");
+  botones[6] = new Boton(resizeX(200), resizeY(200), resizeX(250), resizeY(80), "Nivel 1");
+  botones[7] = new Boton(resizeX(650), resizeY(200), resizeX(250), resizeY(80), "Nivel 2");
+  botones[8] = new Boton(resizeX(200), resizeY(400), resizeX(250), resizeY(80), "Nivel 3");
+  botones[9] = new Boton(resizeX(650), resizeY(400), resizeX(250), resizeY(80), "Nivel 4");
+  botones[10] = new Boton(resizeX(400), resizeY(600), resizeX(250), resizeY(80), "Nivel 5");
   botones[11] = new Boton(resizeX(40), height - resizeY(100), resizeX(60), resizeY(60), "II");
 
   botones[12] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Siguiente Nivel");
   botones[13] = new Boton(width-resizeX(500), resizeY(850), resizeX(350), resizeY(100), "Menu Principal");
+  botones[14] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Reintentar");
 }
 
 //Método para cargar los audios
 void cargarAudio() {
   nivel1 = new SoundFile(this, "hunters.mp3");
   nivelCompletado = new SoundFile(this, "win.mp3");
-  
+  intro = new SoundFile(this, "intro.mp3");
+  die = new SoundFile(this, "die.mp3");
+
   s_recoger = new SoundFile(this, "pick.mp3");
   s_click = new SoundFile(this, "click.mp3");
 }
@@ -48,10 +56,20 @@ void cargarImagenes() {
   inicio = loadImage("Menu.png");
   fondo = loadImage("Fondo.png");
   tileset = loadImage("Dungeon01.png");
+  cambioNivel = loadImage("cambio.png");
+  menuNiveles = loadImage("niveles.png");
+  GameOver = loadImage("Gameover.png");
 }
 //Método para controlar la música
 void musicSystem() {
-  if (!nivel1.isPlaying() && numVentana == 0) {
+  if (!intro.isPlaying() && numVentana == 0) {
+    die.stop();
+    intro.stop();
+    intro.play();
+  }
+
+  if (!nivel1.isPlaying() && numVentana == 4) {
+    intro.stop();
     nivel1.stop();
     nivel1.play();
   }
@@ -60,11 +78,11 @@ void musicSystem() {
 //Método de creación de niveles.
 void crearNiveles() {
   niveles = new Nivel[5];
-  niveles[0] = new Nivel();
-  niveles[1] = new Nivel();
-  niveles[2] = new Nivel();
-  niveles[3] = new Nivel();
-  niveles[4] = new Nivel();
+  niveles[0] = new Nivel(10);
+  niveles[1] = new Nivel(15);
+  niveles[2] = new Nivel(20);
+  niveles[3] = new Nivel(25);
+  niveles[4] = new Nivel(30);
 }
 
 void menu() {
@@ -96,6 +114,7 @@ void menu() {
 }
 
 void niveles() {
+  image(menuNiveles, 0, 0);
   botones[5].dibujar();
   if (botones[5].click()) {
     s_click.play();
@@ -134,6 +153,7 @@ void niveles() {
 }
 
 void opciones() {
+  image(instrucciones, 0, 0);
   botones[5].dibujar();
   if (botones[5].click()) {
     s_click.play();
@@ -149,23 +169,39 @@ void creditos() {
   }
 }
 
-void nivelCompletado() {
-  image(fondo, 0, 0);
-  if (numNivel < 5) {
-    botones[13].dibujar();
-    if (botones[13].click()) {
-      numVentana = 0;
-    }
+void gameOver() {
+  image(GameOver, 0, 0);
+  botones[14].dibujar();
+  if (botones[14].click()) {
+    numVentana = 4;
+  }
+  botones[13].dibujar();
+  if (botones[13].click()) {
+    s_click.play();
+    numVentana = 0;
+  }
+}
 
-    botones[12].dibujar();
-    if (botones[12].click()) {
-      numNivel++;
-      numVentana = 4;
-    }
+void nivelCompletado() {
+  image(cambioNivel, 0, 0);
+  botones[13].dibujar();
+  if (botones[13].click()) {
+    s_click.play();
+    numVentana = 0;
+  }
+
+  botones[12].dibujar();
+  if (botones[12].click()) {
+    s_click.play();
+    numNivel++;
+    numVentana = 4;
   }
 }
 
 void juegoTerminado() {
   image(fondo, 0, 0);
-  numVentana = 0;
+  botones[13].dibujar();
+  if (botones[13].click()) {
+    numVentana = 0;
+  }
 }
