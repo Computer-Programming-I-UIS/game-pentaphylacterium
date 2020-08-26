@@ -6,10 +6,10 @@ class Enemigo {
   
     //Constructor
   Enemigo(float _x, float _y, float _vel) {
-    ipx = _x + random(150, 250);
-    ipy = _y + random(150, 250);
-    px = ipx;
-    py = ipy;
+    ipx = _x;
+    ipy = _y;
+    px = _x;
+    py = _y;
     vel = _vel;
     w = h = random(resizeX(40), resizeX(100));
   }

@@ -159,6 +159,7 @@ void nivelCompletado() {
 
 void juegoTerminado() {
     menu();
+    numVentana = 0;
     /*botones[13].dibujar();
     if(botones[13].click()) {
       numVentana = 0;
