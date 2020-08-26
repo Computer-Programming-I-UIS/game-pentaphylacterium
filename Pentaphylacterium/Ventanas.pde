@@ -163,8 +163,9 @@ void opciones() {
 }
 
 void creditos() {
-  
+  textSize(32);
   text(" PENTAPHYLACTERIUM", 650, y);
+  textSize(24);
   text(" DESARROLLO Y PRODUCCION", 650, y+60);
   text(" Luis Fernando Romero Rojas", 650, y+95);
   text(" Santiago Gutierrez Valderrama", 650, y+130);
