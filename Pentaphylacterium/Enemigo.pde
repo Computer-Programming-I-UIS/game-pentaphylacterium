@@ -5,13 +5,13 @@ class Enemigo {
   boolean activo;
   
     //Constructor
-  Enemigo(float _x, float _y, float _vel) {
+  Enemigo(int _x, int _y, int _vel) {
     ipx = _x;
     ipy = _y;
     px = _x;
     py = _y;
     vel = _vel;
-    w = h = random(resizeX(40), resizeX(100));
+    w = h = random(resizeX(50), resizeX(120));
   }
   
     //Método para dibujar

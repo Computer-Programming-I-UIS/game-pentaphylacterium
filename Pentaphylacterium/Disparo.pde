@@ -52,6 +52,13 @@ class Disparo {
   }
   
     //Funciones get
+  boolean getColision(float X, float Y, float W, float H) {
+    if (X + W > x && X - W < x + w && Y + H > y && Y - H < y + h)
+      return true;
+    else
+      return false;
+  }  
+  
   float getx() {
     return x;
   }

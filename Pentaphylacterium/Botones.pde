@@ -24,16 +24,16 @@ void dibujar() {
     if (mouse) {
       stroke(0);
       strokeWeight(2);
-      fill(#146428);
+      fill(#1115D3);
       rect(x, y, 1.5*resizeX(w), 2*resizeY(h));
       fill(255);
-      textSize(resizeX(40));
+      textSize(resizeX(35));
       textAlign(CENTER, CENTER);
       text(texto, x + w/2, y + h/2);
     } else {
       stroke(0);
       strokeWeight(2);
-      fill(#3C6450);
+      fill(#00026C);
       rect(x, y, 1.5*resizeX(w), 2*resizeY(h));
       fill(0);
       textSize(resizeX(40));

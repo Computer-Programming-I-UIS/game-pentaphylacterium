@@ -1,6 +1,6 @@
 1SSSSDSSSSSSSSSSSSSSSPSSSSSSSSSDSSSSSSSSSSD1
 2ssssdssssssssssssssspsssssssssdssssssssssd2
-BH                  H        JJJJ  CC      b
+BH               H           JJJJ  CC      b
 B                            JJJJ          b
 B                         R  JJJJ          b
 B                            JJJJ          b

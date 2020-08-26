@@ -20,14 +20,13 @@ static int numVentana = 0;
 Boton[] botones;
 
 Escenario nivel;
-PImage inicio;
 
 void setup() {
   size(1320, 600);
   nivel = new Escenario(44, 20, 1);
-  inicio = loadImage("Inicio.png");
   crearBotones();
-  crearNiveles();    
+  crearNiveles();  
+  cargarImagenes();
   cargarAudio();    //funciones que están en la pestaña Ventanas
 }
 
@@ -43,6 +42,7 @@ void draw() {
     niveles();
     break;
   case 2:
+    image(instrucciones, 0, 0);
     opciones();
     break;
   case 3:

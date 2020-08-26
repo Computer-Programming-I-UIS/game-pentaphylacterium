@@ -1,7 +1,7 @@
 class Nivel {
   
   Protagonista player = new Protagonista(width/2, height/2, 8);
-  Enemigo enemigo = new Enemigo(3*width/4, height/2, 20);
+  Enemigo enemigo = new Enemigo(0, round(height/2 + random(-100, 100)), 24);
 
   
   boolean ready = false;
@@ -25,11 +25,16 @@ class Nivel {
     
     for(int numDisparos = 0; numDisparos < disparo.size(); numDisparos ++){
       Disparo bala = disparo.get(numDisparos);
+      if (bala.getColision(enemigo.getpx(), enemigo.getpy(), enemigo.getw(), enemigo.geth())){
+        enemigo.px = 0;
+        enemigo.py = round(height/2 + random(-100, 100));
+        bala.destruir();
+      }
       bala.dibujar();
       bala.mover();
     }
   
-    if(player.getpx() <= width/4){
+    if(player.getpx() <= 665 && player.getpy() >= 0 && player.getpx() >= 625 && player.getpy() <= 50){
       siguienteNivel();
     }
     colisiones();
@@ -45,12 +50,10 @@ class Nivel {
   }
   
   void colisiones() {
-    //for (int i = 0; i < enemigos.length; i++) {
-      //si el enemigo toca al jugador
-      if (enemigo.getColision(player.getpx(), player.getpy(), 32.0, 48.0)){
-        juegoTerminado();
-        println("Deteccion Colision");
-      }
-    //}
+    //si el enemigo toca al jugador
+    if (enemigo.getColision(player.getpx(), player.getpy(), 0.5, 0.5)){
+      juegoTerminado();
+      println("Deteccion Colision Enemigo");
+    }
   }
 }

@@ -5,15 +5,19 @@ SoundFile nivel1;
 SoundFile nivelCompletado;
 SoundFile s_recoger;
 
+  //Llama a todos los objetos de la clase PImage
+PImage inicio;
+PImage instrucciones;
+
   //Método para crear los botones.
 void crearBotones(){
   botones = new Boton[14];
   botones[0] = new Boton(width-resizeX(1200), resizeY(320), resizeX(350), resizeY(100), "Nueva Partida");
   botones[1] = new Boton(width-resizeX(1200), resizeY(470), resizeX(350), resizeY(100), "Niveles");
   botones[2] = new Boton(width-resizeX(1200), resizeY(620), resizeX(350), resizeY(100), "Instrucciones");
-  botones[3] = new Boton(width-resizeX(1200), resizeY(770), resizeX(350), resizeY(100), "Créditos");
-  botones[4] = new Boton(width-resizeX(1200), resizeY(920), resizeX(350), resizeY(100), "Salir");
-  botones[5] = new Boton(resizeX(200), height - resizeY(250), resizeX(350), resizeY(100), "Atras");
+  botones[3] = new Boton(width-resizeX(300), height - resizeY(100), resizeX(250), resizeY(80), "Créditos");
+  botones[4] = new Boton(width-resizeX(1200), resizeY(770), resizeX(350), resizeY(100), "Salir");
+  botones[5] = new Boton(resizeX(100), height - resizeY(150), resizeX(250), resizeY(80), "Atrás");
 
   botones[6] = new Boton(resizeX(200), resizeY(300), resizeX(250), resizeY(80), "Nivel 1");
   botones[7] = new Boton(resizeX(200), resizeY(400), resizeX(250), resizeY(80), "Nivel 2");
@@ -22,8 +26,8 @@ void crearBotones(){
   botones[10] = new Boton(resizeX(200), resizeY(700), resizeX(250), resizeY(80), "Nivel 5");
   botones[11] = new Boton(resizeX(40), height - resizeY(100), resizeX(60), resizeY(60), "II");
   
-  botones[12] = new Boton(width-resizeX(500), resizeY(650), resizeX(400), resizeY(150), "Siguiente Nivel");
-  botones[13] = new Boton(width-resizeX(500), resizeY(850), resizeX(400), resizeY(150), "Menu Principal");
+  botones[12] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Siguiente Nivel");
+  botones[13] = new Boton(width-resizeX(500), resizeY(850), resizeX(350), resizeY(100), "Menu Principal");
 }
 
   //Método para cargar los audios
@@ -33,7 +37,10 @@ void cargarAudio() {
   
   s_recoger = new SoundFile(this, "pick.mp3");
 }
-
+void cargarImagenes() {
+  inicio = loadImage("Inicio.png");
+  instrucciones = loadImage("Instructivo.png");
+}
   //Método para controlar la música
 void musicSystem() {
   if (!nivel1.isPlaying() && numVentana == 0) {
@@ -109,26 +116,6 @@ void niveles() {
 }
 
 void opciones(){
-  fill(255);
-  textSize(36);
-  strokeWeight(8);
-  stroke(#0028FC);
-  text("w", width/16 +11, height/2 -40);
-  text("s", width/16 +9, height/2 +20);
-  line(width/16 +10, height/2 -80, width/16 +10, height/2 -120);
-  line(width/16, height/2 -100, width/16 +10, height/2 -120);
-  line(width/16 +20, height/2 -100, width/16 +10, height/2 -120);
-  line(width/16 +10, height/2 +60, width/16 +10, height/2 +100);
-  line(width/16, height/2 +80, width/16 +10, height/2 +100);
-  line(width/16 +20, height/2 +80, width/16 +10, height/2 +100);
-  text("a", width/4 -20, height/2);
-  text("d", width/4 +20, height/2);
-  line(width/4 -50, height/2, width/4 -80, height/2);
-  line(width/4 +50, height/2, width/4 +80, height/2);
-  line(width/4 -60, height/2 -15, width/4 -80, height/2);
-  line(width/4 -60, height/2 +15, width/4 -80, height/2);
-  line(width/4 +60, height/2 -15, width/4 +80, height/2);
-  line(width/4 +60, height/2 +15, width/4 +80, height/2);
   botones[5].dibujar();
   if(botones[5].click()){
     numVentana = 0;
