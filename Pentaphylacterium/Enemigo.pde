@@ -1,7 +1,10 @@
 class Enemigo {
   float ipx, ipy;
   float px, py, w, h, vel;
+  int x ;
+  int y ;
   boolean activo;
+  PImage enemigo = loadImage("Enemigo01.png");
 
   //Constructor
   Enemigo(int _x, int _y, int _vel) {
@@ -17,11 +20,19 @@ class Enemigo {
   void dibujar() {
     PVector direction = getDireccion(niveles[numNivel].player.getpx(), niveles[numNivel].player.getpy(), px, py, vel);
     noStroke();
-    fill(200, 0, 0);
+    /*fill(200, 0, 0);
     rectMode(CENTER);
-    rect(px, py, w, h);
+    rect(px, py, w, h);*/
+   
     px += direction.x;
     py += direction.y;
+    x= int(px);
+    y= int(py);
+    copy(enemigo,0,0,80,96,x,y,80,96);
+    
+   
+  
+    
   }
 
   boolean getColision(float x, float y, float W, float H) {
