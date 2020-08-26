@@ -1,7 +1,7 @@
 class Nivel {
   
   Protagonista player = new Protagonista(width/2, height/2, 8);
-  Enemigo enemigo = new Enemigo(0, round(height/2 + random(-100, 100)), 24);
+  Enemigo enemigo = new Enemigo(0, round(height/2 + random(-100, 100)), 30);
 
   
   boolean ready = false;
@@ -51,9 +51,8 @@ class Nivel {
   
   void colisiones() {
     //si el enemigo toca al jugador
-    if (enemigo.getColision(player.getpx(), player.getpy(), 0.5, 0.5)){
+    if (enemigo.getColision(player.getpx(), player.getpy(), 1, 20)){
       juegoTerminado();
-      println("Deteccion Colision Enemigo");
     }
   }
 }

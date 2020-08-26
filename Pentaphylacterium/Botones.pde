@@ -23,8 +23,8 @@ void dibujar() {
 
     if (mouse) {
       stroke(0);
-      strokeWeight(2);
-      fill(#1115D3);
+      strokeWeight(0.5);
+      fill(#8E3900, 200);
       rect(x, y, 1.5*resizeX(w), 2*resizeY(h));
       fill(255);
       textSize(resizeX(35));
@@ -32,8 +32,8 @@ void dibujar() {
       text(texto, x + w/2, y + h/2);
     } else {
       stroke(0);
-      strokeWeight(2);
-      fill(#00026C);
+      strokeWeight(0.5);
+      fill(#642901, 200);
       rect(x, y, 1.5*resizeX(w), 2*resizeY(h));
       fill(0);
       textSize(resizeX(40));

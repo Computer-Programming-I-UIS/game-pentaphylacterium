@@ -33,7 +33,7 @@ class Enemigo {
   }*/
   
   boolean getColision(float x, float y, float W, float H) {
-    if (x + W > px && x - W < px + w && y + H > py && y - H < py + h)
+    if (x + W/2 > px && x - W/2 < px + w && y + H/2 > py && y - H/2 < py + h)
       return true;
     else
       return false;

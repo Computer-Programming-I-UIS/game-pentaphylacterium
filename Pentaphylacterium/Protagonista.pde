@@ -3,7 +3,6 @@ class Protagonista {
   int px, py;
   int vel, cvel;
   int counter;
-  PImage sprite = loadImage("Protagonista.png");
   int a = 0, b = 12, c = 4, d = 8;
   boolean miraOn;
   float recarga = 0;

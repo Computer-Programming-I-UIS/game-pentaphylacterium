@@ -39,6 +39,7 @@ void draw() {
     menu();
     break;
   case 1:
+    image(fondo, 0, 0);
     niveles();
     break;
   case 2:
@@ -46,6 +47,7 @@ void draw() {
     opciones();
     break;
   case 3:
+    image(fondo, 0, 0);
     creditos();
     break;
   case 4:

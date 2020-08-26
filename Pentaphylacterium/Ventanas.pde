@@ -8,6 +8,8 @@ SoundFile s_recoger;
   //Llama a todos los objetos de la clase PImage
 PImage inicio;
 PImage instrucciones;
+PImage sprite;
+PImage fondo;
 
   //Método para crear los botones.
 void crearBotones(){
@@ -15,7 +17,7 @@ void crearBotones(){
   botones[0] = new Boton(width-resizeX(1200), resizeY(320), resizeX(350), resizeY(100), "Nueva Partida");
   botones[1] = new Boton(width-resizeX(1200), resizeY(470), resizeX(350), resizeY(100), "Niveles");
   botones[2] = new Boton(width-resizeX(1200), resizeY(620), resizeX(350), resizeY(100), "Instrucciones");
-  botones[3] = new Boton(width-resizeX(300), height - resizeY(100), resizeX(250), resizeY(80), "Créditos");
+  botones[3] = new Boton(width-resizeX(320), height - resizeY(120), resizeX(250), resizeY(80), "Créditos");
   botones[4] = new Boton(width-resizeX(1200), resizeY(770), resizeX(350), resizeY(100), "Salir");
   botones[5] = new Boton(resizeX(100), height - resizeY(150), resizeX(250), resizeY(80), "Atrás");
 
@@ -38,8 +40,10 @@ void cargarAudio() {
   s_recoger = new SoundFile(this, "pick.mp3");
 }
 void cargarImagenes() {
-  inicio = loadImage("Inicio.png");
+  sprite = loadImage("Protagonista.png");
   instrucciones = loadImage("Instructivo.png");
+  inicio = loadImage("Menu.png");
+  fondo = loadImage("Fondo.png");
 }
   //Método para controlar la música
 void musicSystem() {
