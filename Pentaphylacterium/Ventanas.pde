@@ -168,14 +168,14 @@ void creditos() {
   textSize(32);
   text(" PENTAPHYLACTERIUM", 650, y);
   textSize(24);
-  text(" DESARROLLO Y PRODUCCION", 650, y+60);
+  text(" DESARROLLO Y PRODUCCIÓN", 650, y+60);
   text(" Luis Fernando Romero Rojas", 650, y+95);
-  text(" Santiago Gutierrez Valderrama", 650, y+130);
+  text(" Santiago Gutiérrez Valderrama", 650, y+130);
   text(" COLABORACION MUSICAL", 650, y+190);
   text(" Camila Andrea Gómez Pérez. Estudiante de música UIS", 650, y+225);
-  text(" APOYO E INSTRUCCION", 650, y+285);
-  text(" Alex Julian Mantilla Rios. Estudiante de Ing. Electronica UIS", 650, y+320);
-  text(" Camilo Eduardo Rojas Ortiz. Docente UIS", 650, y+355);
+  text(" APOYO E INSTRUCCIÓN", 650, y+285);
+  text(" Alex Julián Mantilla Rios. Estudiante de Ing. Electrónica UIS", 650, y+320);
+  text(" Camilo Eduardo Rojas Ortiz. Docente Cátedra UIS", 650, y+355);
 
   y--;
   botones[5].dibujar();
