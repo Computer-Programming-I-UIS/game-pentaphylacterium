@@ -1,6 +1,6 @@
 class Enemigo {
   float ipx, ipy;
-  float px, py, w, h, vel;
+  float px, py, w =80, h=96, vel;
   int x ;
   int y ;
   boolean activo;
@@ -13,7 +13,7 @@ class Enemigo {
     px = _x;
     py = _y;
     vel = _vel;
-    w = h = random(resizeX(50), resizeX(120));
+    
   }
 
   //Método para dibujar
