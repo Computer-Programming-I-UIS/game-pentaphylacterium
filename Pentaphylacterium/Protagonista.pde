@@ -2,8 +2,6 @@ class Protagonista {
   int x, y;
   int px, py;
   int vel, cvel;
-  //int counter;
-  int a = 0, b = 12, c = 4, d = 8;
   float recarga = 0;
 
   boolean miraOn;
