@@ -2,7 +2,7 @@ class Protagonista {
   int x, y;
   int px, py;
   int vel, cvel;
-  int counter;
+  //int counter;
   int a = 0, b = 12, c = 4, d = 8;
   float recarga = 0;
 
@@ -67,38 +67,34 @@ class Protagonista {
 
     if (keys[0] == true  && !objetoArriba) { //mover arriba
       py -= cvel;
-      delay(15);
-      b++;
-      counter = b;
-      if (b == 15) 
-        b = 11;
+      
+      x=((frameCount/2)%4)*32;
+        y=48*3;
+      
     }
 
     if (keys[2] == true  && !objetoAbajo) { // mover abajo
       py += vel;
-      delay(15);
-      a++;
-      counter = a;
-      if (a == 3) 
-        a = -1;
+    
+        x=((frameCount/2)%4)*32;
+        y=0;
+        
     }
 
     if (keys[3] == true  && !objetoIzquierda) { // mover izquierda
       px -= vel;
-      delay(15);
-      c++;
-      counter = c;
-      if (c == 7) 
-        c = 3;
+    
+        x=((frameCount/2)%4)*32;
+        y=48;
+       
     }
 
     if (keys[1] == true  && !objetoDerecha) { // mover derecha
       px += vel;
-      delay(15);
-      d++;
-      counter = d;
-      if (d == 11)
-        d=7;
+   
+        x=((frameCount/2)%4)*32;
+        y=48*2;
+      
     }
 
     if (recarga > 0)
@@ -122,8 +118,7 @@ class Protagonista {
     }
 
     //personaje
-    x=(counter%4)*32;
-    y=(counter/4)*48;
+    
     copy(sprite, x, y, 32, 48, px, py, 32, 48);
 
     println(int(objetoAbajo));

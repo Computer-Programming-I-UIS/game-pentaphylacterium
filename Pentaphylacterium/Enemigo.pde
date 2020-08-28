@@ -20,9 +20,7 @@ class Enemigo {
   void dibujar() {
     PVector direction = getDireccion(niveles[numNivel].player.getpx(), niveles[numNivel].player.getpy(), px, py, vel);
     noStroke();
-    /*fill(200, 0, 0);
-    rectMode(CENTER);
-    rect(px, py, w, h);*/
+    
    
     px += direction.x;
     py += direction.y;
