@@ -5,7 +5,7 @@ B                            JJJJ          b
 B                C       C   JJJJ          b
 B     R          C       C   JJJJ          b
 B                            JJJJ          b
-B                            JJJJ    C     Hb
+B                            JJJJ    C    Hb
 B H      R     CCCCCCCCCCCCCCJJJJ    C     b
 B  H           R            RJJJJR   C     b
 B H            R                     C     b

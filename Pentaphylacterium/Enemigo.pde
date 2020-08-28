@@ -28,7 +28,39 @@ class Enemigo {
     py += direction.y;
     x= int(px);
     y= int(py);
-    copy(enemigo,0,0,80,96,x,y,80,96);
+    if(abs(direction.x)>=abs(direction.y)){
+            
+      if(direction.x>=0){
+        
+        copy(enemigo,80*((frameCount/2)%4),96*2,80,96,int(px),int(py),80,96);
+        //sprite a la derecha
+        
+      }
+      else {
+        copy(enemigo,80*((frameCount/2)%4),96*1,80,96,int(px),int(py),80,96);
+        
+       //sprite a la izquierda 
+      }            
+       
+    }
+    
+    
+   else{
+     
+     if(direction.y>0){
+       copy(enemigo,80*((frameCount/2)%4),0,80,96,int(px),int(py),80,96);
+        //sprite a abajo
+        
+      }
+      else {
+        copy(enemigo,80*((frameCount/2)%4),96*3,80,96,int(px),int(py),80,96);
+       //sprite a la arriba
+      }          
+     
+     
+     
+   }
+    
     
    
   
