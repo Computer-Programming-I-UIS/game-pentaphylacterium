@@ -74,6 +74,7 @@ void musicSystem() {
   }
 
   if (!nivel1.isPlaying() && numVentana == 4) {
+    die.stop();
     intro.stop();
     nivel1.stop();
     nivel1.play();

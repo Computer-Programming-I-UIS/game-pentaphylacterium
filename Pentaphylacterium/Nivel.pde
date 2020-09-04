@@ -62,7 +62,7 @@ class Nivel {
       bala.mover();
     }
 
-    if (player.getpx() <= 665 && player.getpy() >= 0 && player.getpx() >= 625 && player.getpy() <= 50) {
+    if (player.getpx() <= 665 && player.getpy() >= 0 && player.getpx() >= 620 && player.getpy() <= 50) {
       siguienteNivel();
     }
     colisiones();

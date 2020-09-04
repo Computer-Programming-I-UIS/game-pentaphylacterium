@@ -126,7 +126,7 @@ class Protagonista {
     Disparo bala;
     bala = new Disparo(px+12, py+24, mouseX+6, mouseY+12);
     niveles[numNivel].disparo.add(bala);
-    recarga = 3;
+    recarga = 2;
   }
 
   float getpx() {
