@@ -29,7 +29,7 @@ class Escenario {
   }
 
   //Métodos
-
+  
   void cargarNivel() {
     if (nivelNoEstaCargado) { //Si el nivel NO ha sido cargado
       archivoEscenario = "data/niveles/" + str(nivel) + "/escenario.txt";  // "data/niveles/1/escenario.txt"
@@ -38,7 +38,7 @@ class Escenario {
       leerEscenario();
       leerObjetos();
       leerObjeto(); 
-      println("Game Loaded");
+      println("Game Loaded: " + str(nivel));
       nivelNoEstaCargado = false;
     }
 
@@ -76,7 +76,6 @@ class Escenario {
     //leer el archivo del escenario
     println(archivoEscenario);
     String[] lines = loadStrings(archivoEscenario);
-    println("there are " + lines.length + " lines");
     for (int i = 0; i < lines.length; i++) {
       println(lines[i]);
       for (int j = 0; j < 44; j++) {
@@ -112,7 +111,6 @@ class Escenario {
   void leerObjetos() {
     //leer el archivo de los objetos con los que interacciona
     String[] line = loadStrings(archivoObjects);
-    println("there are " + line.length + " lines");
     for (int n = 0; n < line.length; n++) {
       println(line[n]);
       for (int m = 0; m < 44; m++) {
@@ -197,7 +195,6 @@ class Escenario {
   void leerObjeto() {
     //leer el archivo de los objetos con los que no interacciona
     String[] liner = loadStrings(archivoObject);
-    println("there are " + liner.length + " lines");
     for (int k = 0; k < liner.length; k++) {
       println(liner[k]);
       for (int l = 0; l < 44; l++) {

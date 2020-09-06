@@ -64,6 +64,7 @@ void cargarImagenes() {
   GameOver = loadImage("Gameover.png");
   mapa = loadImage("Historia.png");
 }
+
 //Método para controlar la música
 void musicSystem() {
   if (!intro.isPlaying() && numVentana == 0) {
@@ -130,30 +131,35 @@ void niveles() {
   if (botones[6].click()) {
     s_click.play();
     numNivel = 0;
+    nivel.cambiarNivel(numNivel+1);
     numVentana = 4;
   }
   botones[7].dibujar();
   if (botones[7].click()) {
     s_click.play();
     numNivel = 1;
+    nivel.cambiarNivel(numNivel+1);
     numVentana = 4;
   }
   botones[8].dibujar();
   if (botones[8].click()) {
     s_click.play();
     numNivel = 2;
+    nivel.cambiarNivel(numNivel+1);
     numVentana = 4;
   }
   botones[9].dibujar();
   if (botones[9].click()) {
     s_click.play();
     numNivel = 3;
+    nivel.cambiarNivel(numNivel+1);
     numVentana = 4;
   }
   botones[10].dibujar();
   if (botones[10].click()) {
     s_click.play();
     numNivel = 4;
+    nivel.cambiarNivel(numNivel+1);
     numVentana = 4;
   }
 }
@@ -183,7 +189,8 @@ void creditos() {
   y--;
   botones[5].dibujar();
 
-  if (y+355<0) y=610;
+  if (y+355<0) 
+    y=610;
 
   if (botones[5].click()) {
     s_click.play();
@@ -217,6 +224,7 @@ void nivelCompletado() {
   if (botones[12].click()) {
     s_click.play();
     numNivel++;
+    nivel.cambiarNivel(numNivel+1);
     numVentana = 4;
   }
 }
@@ -233,7 +241,7 @@ void juegoTerminado() {
 void pausa() {
   image(fondo, 0, 0);
   botones[15].dibujar();
-  if (botones[14].click()) {
+  if (botones[15].click()) {
     numVentana = 4;
   }
   botones[13].dibujar();

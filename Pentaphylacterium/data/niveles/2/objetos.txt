@@ -1,0 +1,20 @@
+1SSSSDSSSSSSSSSSSSSSSPSSSSSSSSSDSSSSSSSSSSD1
+2ssssdssssssssssssssspsssssssssdssssssssssd2
+BHRHRHRHRHRHRHRHRHRH   HRHRHRJJJJ  CC      b
+B                C           JJJJ          b
+B                C           JJJJ          b
+B     R          C           JJJJ          b
+B                            JJJJ          b
+B                            JJJJ    C    Hb
+B H      R     CCCCCCCCCCCCCCJJJJ    C     b
+B  H           R            RJJJJR   C     b
+B H            R                     C     b
+B               R                    C     b
+B     R          R          RJJJJR   C     b
+B                R          CJJJJH         b
+B         R     R           CJJJJH         b
+B                           CJJJJ          b
+B H H                       CJJJJ          b
+B  H       R                CJJJJH    R    b
+B H H                CC     CJJJJH       H b
+3AAAAAAAAAAAAAAAAAAAAAAAAAAAAjjjjAAAAAAAAAA4

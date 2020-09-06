@@ -1,20 +1,20 @@
 1SSSSDSSSSSSSSSSSSSSSPSSSSSSSSSDSSSSSSSSSSD1
 2ssssdssssssssssssssspsssssssssdssssssssssd2
-BHRHRHRHRHRHRHRHRHRH   HRHRHRJJJJ  CC      b
-B                            JJJJ          b
-B                C       C   JJJJ          b
-B     R          C       C   JJJJ          b
-B                            JJJJ          b
-B                            JJJJ    C    Hb
-B H      R     CCCCCCCCCCCCCCJJJJ    C     b
-B  H           R            RJJJJR   C     b
-B H            R                     C     b
-B               R           RJJJJR   C     b
-B     R          R          CJJJJ    C     b
-B                R          CJJJJ          b
-B         R     R           CJJJJ          b
-B                           CJJJJ          b
-B H H                       CJJJJ  R       b
-B  H       R                CJJJJ          b
-B H H                CC     CJJJJ        H b
-3AAAAAAAAAAAAAAAAAAAAAAAAAAAAjjjjAAAAAAAAAA4
+BHRHRHRHRHRHRHRHRHRH   HRHRHRHRHRHRHRHRHRHRb
+BR                                     RHRHb
+BH                                   RHHRHRb
+BR                                 RHR    Hb
+BH                               RHR      Rb
+BR                 CCCC        RHHR       Hb
+BH                C    C     RHR          Rb
+BR               C      C  RHR            Hb
+BH              C        CRHR             Rb
+BR               C      C                 Hb
+BH                C    C                  Rb
+BR                 CCCC                   Hb
+BH                                        Rb
+BR                                        Hb
+BH                                        Rb
+BR                                        Hb
+BHRHRHRHRHRHRHRHRHRH   HRHRHRHRHRHRHRHRHRHRb
+3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4

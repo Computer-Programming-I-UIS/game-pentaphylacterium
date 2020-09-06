@@ -3,6 +3,7 @@ class Nivel {
   Protagonista player = new Protagonista(32*width/36, height/2, 8);
   Enemigo[] enemigos;
   int enemigosActivos = 1;
+  int nivelesSuperados = 0;
   int tNuevoEnemigo_ms = 10000;
   int cantidadEnemigos;
 
@@ -14,14 +15,12 @@ class Nivel {
     enemigos = new Enemigo[numEnemigos];
     for (int i = 0; i < numEnemigos; i++) {
       float aleatorio = random(0, 1);
-      if (aleatorio < 0.5) enemigos[i] = new Enemigo(width, round(height/2 + random(-500, 500)), 24);
-      else enemigos[i] = new Enemigo(0, round(height/2 + random(-500, 500)), 24);
+      if (aleatorio < 0.5) enemigos[i] = new Enemigo(width + 250, round(height/2 + random(-500, 500)), 24);
+      else enemigos[i] = new Enemigo(-250, round(height/2 + random(-500, 500)), 24);
     }
   }
 
   boolean ready = false;
-
-  // Escenario escenario;
 
   ArrayList<Disparo> disparo = new ArrayList();
 
@@ -36,11 +35,7 @@ class Nivel {
     for (int i = 0; i < enemigosActivos; i++) {
       enemigos[i].dibujar();
     }
-    /* UNIR EL ESCENARIO CON EL JUGADOR
-     
-     player.verificarObstaculos(escenario.pos_interacciones, escenario.numElemInt);
-     
-     */
+
     player.verificarObstaculos(obstaculos, numElemInt);
     player.controles();
 
@@ -51,9 +46,9 @@ class Nivel {
         if (bala.getColision(enemigos[i].getpx(), enemigos[i].getpy(), enemigos[i].getw(), enemigos[i].geth())) {
           float aleatorio = random(0, 1);
           if (aleatorio < 0.5)
-            enemigos[i].px = 0;
+            enemigos[i].px = -250;
           else
-            enemigos[i].px = width;
+            enemigos[i].px = width +250;
           enemigos[i].py = round(height/2 + random(-500, 500));
           bala.destruir();
         }
@@ -61,9 +56,21 @@ class Nivel {
       bala.dibujar();
       bala.mover();
     }
-
+    
+    //cuando pasa de nivel
     if (player.getpx() <= 665 && player.getpy() >= 0 && player.getpx() >= 620 && player.getpy() <= 50) {
       siguienteNivel();
+      for (int i = 0; i < enemigosActivos; i++) {
+        player.px = 32*width/36;
+        player.py = height/2;
+        enemigosActivos = 0;
+        float aleatorio = random(0, 1);
+        if (aleatorio < 0.5)
+          enemigos[i].px = 0;
+        else
+          enemigos[i].px = width + 250;
+        enemigos[i].py = round(height/2 + random(-500, 500));
+      }
     }
     colisiones();
   }
@@ -72,7 +79,7 @@ class Nivel {
     if (numNivel < 4)
       numVentana = 5;
     else
-      numVentana = 0;
+      numVentana = 6;
     nivel1.stop();
     nivelCompletado.play();
   }
@@ -89,9 +96,9 @@ class Nivel {
         enemigosActivos = 0;
         float aleatorio = random(0, 1);
         if (aleatorio < 0.5)
-          enemigos[i].px = 0;
+          enemigos[i].px = -100;
         else
-          enemigos[i].px = width + 250;
+          enemigos[i].px = width + 100;
         enemigos[i].py = round(height/2 + random(-500, 500));
       }
     }

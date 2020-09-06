@@ -11,9 +11,9 @@
  Universidad Industrial de Santanader.
  
  Descripción: Ayuda al intrépido explorador a surcar las laberínticas y peligrosas mazmorras 
-              llenas de espectros en búsqueda de los fragmentos perdidos del mítico talismán, 
-              el legendario Pentaphylacterium codiciado por todos los cazatesoros.
-              
+ llenas de espectros en búsqueda de los fragmentos perdidos del mítico talismán, 
+ el legendario Pentaphylacterium codiciado por todos los cazatesoros.
+ 
  Para la ejecución de este programa es necesaria la instalación de la librería processing.sound.*
  ***********************************************************************************************/
 

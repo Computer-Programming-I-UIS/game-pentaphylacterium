@@ -24,18 +24,18 @@ class Protagonista {
     int cnt4 = 0;
 
     for (int n = 0; n < numElemInt; n++) {
-      if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] > py && obstaculos[1][n] < py+48+vel) { // deteccion de elementos abajo
+      if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] +8 > py && obstaculos[1][n] -8 < py+48+vel) { // deteccion de elementos abajo
         cnt ++;
       } 
-      if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] + 30 < py+48 && obstaculos[1][n] + 30 > py+36-vel) { // deteccion de elementos arriba
+      if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] + 22 < py+48 && obstaculos[1][n] + 38 > py+36-vel) { // deteccion de elementos arriba
         cnt2 ++;
       }
     }
     for (int m = 0; m < numElemInt; m++) {
-      if (obstaculos[0][m] < px+32+vel && obstaculos[0][m] + 30 > px+32+vel && obstaculos[1][m] +48 > py+44 && obstaculos[1][m] < py+48) {// deteccion de elementos derecha
+      if (obstaculos[0][m] -8 < px+32+vel && obstaculos[0][m] + 38 > px+32+vel && obstaculos[1][m] +48 > py+44 && obstaculos[1][m] < py+48) {// deteccion de elementos derecha
         cnt3 ++;
       } 
-      if (obstaculos[0][m] + 30 > px-vel && obstaculos[0][m] < px-vel && obstaculos[1][m] + 48 > py+44 && obstaculos[1][m] < py+48) {// deteccion de elementos izquierda
+      if (obstaculos[0][m] + 38 > px-vel && obstaculos[0][m] -8 < px-vel && obstaculos[1][m] + 48 > py+44 && obstaculos[1][m] < py+48) {// deteccion de elementos izquierda
         cnt4 ++;
       }
     }
@@ -65,34 +65,30 @@ class Protagonista {
 
     if (keys[0] == true  && !objetoArriba) { //mover arriba
       py -= cvel;
-      
+
       x=((frameCount/2)%4)*32;
-        y=48*3;
-      
+      y=48*3;
     }
 
     if (keys[2] == true  && !objetoAbajo) { // mover abajo
       py += vel;
-    
-        x=((frameCount/2)%4)*32;
-        y=0;
-        
+
+      x=((frameCount/2)%4)*32;
+      y=0;
     }
 
     if (keys[3] == true  && !objetoIzquierda) { // mover izquierda
       px -= vel;
-    
-        x=((frameCount/2)%4)*32;
-        y=48;
-       
+
+      x=((frameCount/2)%4)*32;
+      y=48;
     }
 
     if (keys[1] == true  && !objetoDerecha) { // mover derecha
       px += vel;
-   
-        x=((frameCount/2)%4)*32;
-        y=48*2;
-      
+
+      x=((frameCount/2)%4)*32;
+      y=48*2;
     }
 
     if (recarga > 0)
@@ -116,10 +112,8 @@ class Protagonista {
     }
 
     //personaje
-    
-    copy(sprite, x, y, 32, 48, px, py, 32, 48);
 
-    println(int(objetoAbajo));
+    copy(sprite, x, y, 32, 48, px, py, 32, 48);
   }
 
   void disparar() {
