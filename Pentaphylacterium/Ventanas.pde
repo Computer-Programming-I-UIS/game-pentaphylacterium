@@ -19,10 +19,11 @@ PImage cambioNivel;
 PImage menuNiveles;
 PImage GameOver;
 PImage mapa;
+PImage intro1;
 
 //Método para crear los botones.
 void crearBotones() {
-  botones = new Boton[16];
+  botones = new Boton[17];
   botones[0] = new Boton(width-resizeX(1200), resizeY(320), resizeX(350), resizeY(100), "Nueva Partida");
   botones[1] = new Boton(width-resizeX(1200), resizeY(470), resizeX(350), resizeY(100), "Niveles");
   botones[2] = new Boton(width-resizeX(1200), resizeY(620), resizeX(350), resizeY(100), "Instrucciones");
@@ -41,6 +42,7 @@ void crearBotones() {
   botones[13] = new Boton(width-resizeX(500), resizeY(850), resizeX(350), resizeY(100), "Menu Principal");
   botones[14] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Reintentar");
   botones[15] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Continuar");
+  botones[16] = new Boton(width-resizeX(320), height - resizeY(120), resizeX(250), resizeY(80), "Siguiente");
 }
 
 //Método para cargar los audios
@@ -63,6 +65,7 @@ void cargarImagenes() {
   menuNiveles = loadImage("niveles.png");
   GameOver = loadImage("Gameover.png");
   mapa = loadImage("Historia.png");
+  intro1 = loadImage("Historia1.png");
 }
 
 //Método para controlar la música
@@ -97,7 +100,7 @@ void menu() {
   if (botones[0].click()) {
     s_click.play();
     numNivel = 0;
-    numVentana = 4;
+    numVentana = 9;
   }
   botones[1].dibujar();
   if (botones[1].click()) {
@@ -237,6 +240,21 @@ void juegoTerminado() {
     numVentana = 0;
   }
 }
+void intro1(){
+  image(intro1,0,0);
+  botones[16].dibujar();
+  if (botones[16].click()) {
+    numVentana = 4;
+  }
+}
+
+/*void intro2(){
+  image(intro1,0,0);
+  botones[16].dibujar();
+  if (botones[16].click()) {
+    numVentana = 4;
+  }
+}*/
 
 void pausa() {
   image(fondo, 0, 0);

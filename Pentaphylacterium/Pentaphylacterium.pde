@@ -74,7 +74,11 @@ void draw() {
   case 8:
     pausa();
     break;
+  case 9:
+    intro1();
+    break;
   }
+  
 
   oneClick();   //función para dar click solo una vez
 
