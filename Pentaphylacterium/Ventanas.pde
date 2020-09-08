@@ -29,7 +29,7 @@ PImage intro4;
 
 //Método para crear los botones.
 void crearBotones() {
-  botones = new Boton[17];
+  botones = new Boton[18];
   botones[0] = new Boton(width-resizeX(1200), resizeY(320), resizeX(350), resizeY(100), "Nueva Partida");
   botones[1] = new Boton(width-resizeX(1200), resizeY(470), resizeX(350), resizeY(100), "Niveles");
   botones[2] = new Boton(width-resizeX(1200), resizeY(620), resizeX(350), resizeY(100), "Instrucciones");
@@ -49,6 +49,7 @@ void crearBotones() {
   botones[14] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Reintentar");
   botones[15] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Continuar");
   botones[16] = new Boton(width-resizeX(320), height - resizeY(120), resizeX(250), resizeY(80), "Siguiente");
+  botones[17] = new Boton(width/2 - resizeX(250), height - resizeY(150), resizeX(250), resizeY(80), "Jugar");
 }
 
 //Método para cargar los audios
@@ -87,6 +88,31 @@ void musicSystem() {
     nivel2.stop();
     nivel3.stop();
     die.stop();
+    victoria.stop();
+    intro.stop();
+    intro.amp(0.6);
+    intro.play();
+  }
+
+  if (!intro.isPlaying() && numVentana == 9) {
+    intro.stop();
+    intro.amp(0.6);
+    intro.play();
+  }
+
+  if (!intro.isPlaying() && numVentana == 10) {
+    intro.stop();
+    intro.amp(0.6);
+    intro.play();
+  }
+
+  if (!intro.isPlaying() && numVentana == 11) {
+    intro.stop();
+    intro.amp(0.6);
+    intro.play();
+  }
+
+  if (!intro.isPlaying() && numVentana == 12) {
     intro.stop();
     intro.amp(0.6);
     intro.play();
@@ -98,18 +124,21 @@ void musicSystem() {
     if (numNivel == 0 || numNivel == 1) {
       if (!nivel1.isPlaying()) {
         nivel1.stop();
+        nivel1.amp(0.8);
         nivel1.play();
       }
     }
     if (numNivel == 2 || numNivel == 3) {
       if (!nivel2.isPlaying()) {
         nivel2.stop();
+        nivel2.amp(0.5);
         nivel2.play();
       }
     }
     if (numNivel == 4) {
       if (!nivel3.isPlaying()) {
         nivel3.stop();
+        nivel3.amp(0.8);
         nivel3.play();
       }
     }
@@ -205,6 +234,12 @@ void opciones() {
     s_click.play();
     numVentana = 0;
   }
+  botones[17].dibujar();
+  if (botones[17].click()) {
+    numNivel = 0;
+    nivel.cambiarNivel(1);
+    numVentana = 4;
+  }
 }
 
 void creditos() {
@@ -274,33 +309,37 @@ void intro1() {
   image(intro1, 0, 0);
   botones[16].dibujar();
   if (botones[16].click()) {
+    s_click.play();
     numVentana = 10;
   }
 }
 
-void intro2(){
- image(intro2,0,0);
- botones[16].dibujar();
- if (botones[16].click()) {
- numVentana = 11;
- }
- }
- 
- void intro3(){
- image(intro3,0,0);
- botones[16].dibujar();
- if (botones[16].click()) {
- numVentana = 12;
- }
- }
- 
- void intro4(){
- image(intro4,0,0);
- botones[16].dibujar();
- if (botones[16].click()) {
- numVentana = 4;
- }
- }
+void intro2() {
+  image(intro2, 0, 0);
+  botones[16].dibujar();
+  if (botones[16].click()) {
+    s_click.play();
+    numVentana = 11;
+  }
+}
+
+void intro3() {
+  image(intro3, 0, 0);
+  botones[16].dibujar();
+  if (botones[16].click()) {
+    s_click.play();
+    numVentana = 12;
+  }
+}
+
+void intro4() {
+  image(intro4, 0, 0);
+  botones[16].dibujar();
+  if (botones[16].click()) {
+    s_click.play();
+    numVentana = 2;
+  }
+}
 
 void pausa() {
   image(fondo, 0, 0);

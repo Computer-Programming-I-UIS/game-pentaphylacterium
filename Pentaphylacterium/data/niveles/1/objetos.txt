@@ -8,7 +8,7 @@ BH                               RHR      Rb
 BR                 CCCC        RHHR       Hb
 BH                C    C     RHR          Rb
 BR               C      C  RHR            Hb
-BH              C        CRHR             Rb
+BHRHRHR    RHRHRC        CRHR             Rb
 BR               C      C                 Hb
 BH                C    C                  Rb
 BR                 CCCC                   Hb

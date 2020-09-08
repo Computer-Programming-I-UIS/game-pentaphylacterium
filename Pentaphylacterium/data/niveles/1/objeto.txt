@@ -8,7 +8,7 @@ M                                          M
 M                                          M
 M                  PPPP                    M
 M                 PPPPPP                   M
-M               PPPPPPPPPP                 M
+M      PPPP     PPPPPPPPPP                 M
 M                 PPPPPP                   M
 M                  PPPP                    M
 M                                          M
