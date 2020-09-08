@@ -77,6 +77,15 @@ void draw() {
   case 9:
     intro1();
     break;
+  case 10:
+    intro2();
+    break;
+  case 11:
+    intro3();
+    break;
+  case 12:
+    intro4();
+    break;
   }
   
 

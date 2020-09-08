@@ -10,7 +10,7 @@ SoundFile s_click;
 SoundFile intro;
 SoundFile die;
 SoundFile victoria;
-int y=610;
+int y=610, q=610;
 
 //Llama a todos los objetos de la clase PImage
 PImage inicio;
@@ -23,6 +23,9 @@ PImage menuNiveles;
 PImage GameOver;
 PImage mapa;
 PImage intro1;
+PImage intro2;
+PImage intro3;
+PImage intro4;
 
 //Método para crear los botones.
 void crearBotones() {
@@ -72,6 +75,9 @@ void cargarImagenes() {
   GameOver = loadImage("Gameover.png");
   mapa = loadImage("Historia.png");
   intro1 = loadImage("Historia1.png");
+  intro2 = loadImage("Historia2.png");
+  intro3 = loadImage("Historia3.png");
+  intro4 = loadImage("Historia4.png");
 }
 
 //Método para controlar la música
@@ -268,17 +274,33 @@ void intro1() {
   image(intro1, 0, 0);
   botones[16].dibujar();
   if (botones[16].click()) {
-    numVentana = 4;
+    numVentana = 10;
   }
 }
 
-/*void intro2(){
- image(intro1,0,0);
+void intro2(){
+ image(intro2,0,0);
+ botones[16].dibujar();
+ if (botones[16].click()) {
+ numVentana = 11;
+ }
+ }
+ 
+ void intro3(){
+ image(intro3,0,0);
+ botones[16].dibujar();
+ if (botones[16].click()) {
+ numVentana = 12;
+ }
+ }
+ 
+ void intro4(){
+ image(intro4,0,0);
  botones[16].dibujar();
  if (botones[16].click()) {
  numVentana = 4;
  }
- }*/
+ }
 
 void pausa() {
   image(fondo, 0, 0);
