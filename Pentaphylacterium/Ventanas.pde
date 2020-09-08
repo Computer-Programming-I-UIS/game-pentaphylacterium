@@ -9,6 +9,7 @@ SoundFile s_recoger;
 SoundFile s_click;
 SoundFile intro;
 SoundFile die;
+SoundFile victoria;
 int y=610;
 
 //Llama a todos los objetos de la clase PImage
@@ -55,6 +56,7 @@ void cargarAudio() {
   nivelCompletado = new SoundFile(this, "win.mp3");
   intro = new SoundFile(this, "intro.mp3");
   die = new SoundFile(this, "die.mp3");
+  victoria = new SoundFile(this, "Victory.mp3");
 
   s_recoger = new SoundFile(this, "pick.mp3");
   s_click = new SoundFile(this, "click.mp3");

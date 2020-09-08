@@ -76,14 +76,16 @@ class Nivel {
   }
 
   void siguienteNivel() {
-    if (numNivel < 4)
-      numVentana = 5;
-    else
-      numVentana = 6;
     nivel1.stop();
     nivel2.stop();
     nivel3.stop();
-    nivelCompletado.play();
+    if (numNivel < 4) {
+      numVentana = 5;
+      nivelCompletado.play();
+    } else{
+      numVentana = 6;
+      victoria.play();
+    }
   }
 
   void colisiones() {
