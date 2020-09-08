@@ -24,18 +24,18 @@ class Protagonista {
     int cnt4 = 0;
 
     for (int n = 0; n < numElemInt; n++) {
-      if (obstaculos[0][n] -2 < px +12 && obstaculos[0][n] + 32 > px +12 && obstaculos[1][n] +32 > py+24 && obstaculos[1][n] -32 < py+24+vel) { // deteccion de elementos abajo
+      if (obstaculos[0][n] -12 < px +12 && obstaculos[0][n] + 32 > px +12 && obstaculos[1][n] +32 > py+24 && obstaculos[1][n] -32 < py+24+vel) { // deteccion de elementos abajo
         cnt ++;
       } 
-      if (obstaculos[0][n] -2 < px +12 && obstaculos[0][n] + 32 > px +12 && obstaculos[1][n] -32 < py+24 && obstaculos[1][n] +32 > py+24-vel) { // deteccion de elementos arriba
+      if (obstaculos[0][n] -12 < px +12 && obstaculos[0][n] + 32 > px +12 && obstaculos[1][n] -32 < py+24 && obstaculos[1][n] +32 > py+24-vel) { // deteccion de elementos arriba
         cnt2 ++;
       }
     }
     for (int m = 0; m < numElemInt; m++) {
-      if (obstaculos[0][m] -28 < px+12+vel && obstaculos[0][m] +18 > px+12+vel && obstaculos[1][m] +28 > py+24 && obstaculos[1][m] -28 < py+24) {// deteccion de elementos derecha
+      if (obstaculos[0][m] -18 < px+12+vel && obstaculos[0][m] +18 > px+12+vel && obstaculos[1][m] +29 > py+24 && obstaculos[1][m] -29 < py+24) {// deteccion de elementos derecha
         cnt3 ++;
       } 
-      if (obstaculos[0][m] + 50 > px+12-vel && obstaculos[0][m] +4 < px+12-vel && obstaculos[1][m] + 28 > py+24 && obstaculos[1][m] -28 < py+24) {// deteccion de elementos izquierda
+      if (obstaculos[0][m] + 30 > px+12-vel && obstaculos[0][m] +4 < px+12-vel && obstaculos[1][m] +29 > py+24 && obstaculos[1][m] -29 < py+24) {// deteccion de elementos izquierda
         cnt4 ++;
       }
     }

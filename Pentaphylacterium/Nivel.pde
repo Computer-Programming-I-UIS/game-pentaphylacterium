@@ -1,6 +1,6 @@
 class Nivel {
 
-  Protagonista player = new Protagonista(32*width/36, height/2, 8);
+  Protagonista player = new Protagonista(32*width/36, height/2, 10);
   Enemigo[] enemigos;
   int enemigosActivos = 1;
   int nivelesSuperados = 0;
