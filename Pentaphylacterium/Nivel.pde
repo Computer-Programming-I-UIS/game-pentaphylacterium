@@ -56,7 +56,7 @@ class Nivel {
       bala.dibujar();
       bala.mover();
     }
-    
+
     //cuando pasa de nivel
     if (player.getpx() <= 665 && player.getpy() >= 0 && player.getpx() >= 620 && player.getpy() <= 50) {
       siguienteNivel();
@@ -81,6 +81,8 @@ class Nivel {
     else
       numVentana = 6;
     nivel1.stop();
+    nivel2.stop();
+    nivel3.stop();
     nivelCompletado.play();
   }
 
@@ -90,6 +92,8 @@ class Nivel {
       if (enemigos[i].getColision(player.getpx(), player.getpy(), 1, 20)) {
         numVentana = 7;
         nivel1.stop();
+        nivel2.stop();
+        nivel3.stop();
         die.play();
         player.px = 32*width/36;
         player.py = height/2;

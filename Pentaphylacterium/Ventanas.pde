@@ -2,6 +2,8 @@ import processing.sound.*;        //Librería de sonido de Processing.
 
 //Llama a todos los objetos de la clase SoundFile.
 SoundFile nivel1;
+SoundFile nivel2;
+SoundFile nivel3;
 SoundFile nivelCompletado;
 SoundFile s_recoger;
 SoundFile s_click;
@@ -48,6 +50,8 @@ void crearBotones() {
 //Método para cargar los audios
 void cargarAudio() {
   nivel1 = new SoundFile(this, "hunters.mp3");
+  nivel2 = new SoundFile(this, "explorer.mp3");
+  nivel3 = new SoundFile(this, "finale.mp3");
   nivelCompletado = new SoundFile(this, "win.mp3");
   intro = new SoundFile(this, "intro.mp3");
   die = new SoundFile(this, "die.mp3");
@@ -72,16 +76,35 @@ void cargarImagenes() {
 void musicSystem() {
   if (!intro.isPlaying() && numVentana == 0) {
     nivel1.stop();
+    nivel2.stop();
+    nivel3.stop();
     die.stop();
     intro.stop();
+    intro.amp(0.6);
     intro.play();
   }
 
-  if (!nivel1.isPlaying() && numVentana == 4) {
-    die.stop();
+  if (numVentana == 4) {
     intro.stop();
-    nivel1.stop();
-    nivel1.play();
+    die.stop();
+    if (numNivel == 0 || numNivel == 1) {
+      if (!nivel1.isPlaying()) {
+        nivel1.stop();
+        nivel1.play();
+      }
+    }
+    if (numNivel == 2 || numNivel == 3) {
+      if (!nivel2.isPlaying()) {
+        nivel2.stop();
+        nivel2.play();
+      }
+    }
+    if (numNivel == 4) {
+      if (!nivel3.isPlaying()) {
+        nivel3.stop();
+        nivel3.play();
+      }
+    }
   }
 }
 
@@ -234,14 +257,13 @@ void nivelCompletado() {
 
 void juegoTerminado() {
   image(fondo, 0, 0);
-  intro.stop();
   botones[13].dibujar();
   if (botones[13].click()) {
     numVentana = 0;
   }
 }
-void intro1(){
-  image(intro1,0,0);
+void intro1() {
+  image(intro1, 0, 0);
   botones[16].dibujar();
   if (botones[16].click()) {
     numVentana = 4;
@@ -249,12 +271,12 @@ void intro1(){
 }
 
 /*void intro2(){
-  image(intro1,0,0);
-  botones[16].dibujar();
-  if (botones[16].click()) {
-    numVentana = 4;
-  }
-}*/
+ image(intro1,0,0);
+ botones[16].dibujar();
+ if (botones[16].click()) {
+ numVentana = 4;
+ }
+ }*/
 
 void pausa() {
   image(fondo, 0, 0);

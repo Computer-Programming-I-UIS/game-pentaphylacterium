@@ -24,10 +24,10 @@ class Protagonista {
     int cnt4 = 0;
 
     for (int n = 0; n < numElemInt; n++) {
-      if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] +8 > py && obstaculos[1][n] -8 < py+48+vel) { // deteccion de elementos abajo
+      if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] +10 > py && obstaculos[1][n] -10 < py+48+vel) { // deteccion de elementos abajo
         cnt ++;
       } 
-      if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] + 22 < py+48 && obstaculos[1][n] + 38 > py+36-vel) { // deteccion de elementos arriba
+      if (obstaculos[0][n] < px +32 && obstaculos[0][n] + 30 > px && obstaculos[1][n] + 20 < py+48 && obstaculos[1][n] + 40 > py+36-vel) { // deteccion de elementos arriba
         cnt2 ++;
       }
     }
