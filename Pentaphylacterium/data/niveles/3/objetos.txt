@@ -1,20 +1,20 @@
 1SSSSDSSSSSSSSSSSSSSSPSSSSSSSSSDSSSSSSSSSSD1
 2ssssdssssssssssssssspsssssssssdssssssssssd2
-BHRHRHRHRHRHRHRHRHRH   HRHRHRJJJJ  CC      b
-B                            JJJJ          b
-B                C       C   JJJJ          b
-B     R          C       C   JJJJ          b
-B                            JJJJ          b
-B                            JJJJ    C    Hb
-B H      R                   JJJJ    C     b
-B  H                        RJJJJR   C     b
-B H                                  C     b
-B                           RJJJJR   C     b
-B     R          R          CJJJJ    C     b
-B                           CJJJJ          b
-B         R     R           CJJJJ          b
-B                           CJJJJ          b
-B H H                       CJJJJ  R       b
-B  H       R                CJJJJ          b
-B H H                CC     CJJJJ        H b
-3AAAAAAAAAAAAAAAAAAAAAAAAAAAAjjjjAAAAAAAAAA4
+BJJJJJJJJJJJJJJJJJJR   RJ             JJJJJb
+BJJJJJJJJJJJJJJJJJJR   RJJJJJJJJJJJ   JJ   b
+BJJJ                   CJJJ           JJ   b
+BJJJ  JJJJJJJJJJJJJJJJJJJJJ  JJJJJJJJJJJ   b
+BJJJ        JJJJJJJJJJJJJJJ  JJ  CC   JJ   b
+BJJJJJJJJJ                   JJ    C  JJ   b
+BJJ CC JJJ  JJJJJJJJJJJJJJJJJJJJJJJJJJJJ   b
+BJJ CC JJJ  JJJJJJJJJR                     b
+BJJ CC JJJ  JJJJJJJJJJ  JJJJJJJJJJJJJJJJ   b
+BJJJJJJJJJ  JJJJJJJJJJ  JJ     CCC   JJJ   b
+BJJ          JJ R JJJJ  JJ     RHR   JJJ   b
+BJJ  JJJJJJJJJJJJJJJJJ  JJJJJJJJJJJJJJJJ   b
+BJJ  JJJJJJJ   CC   JJ            JJJJJJ   b
+BJJ       JJ  RRRR  JJJJJJJJJJJJ  JJJJJJ   b
+BJJJJJJJ  JJ   CC       HH JJJJJ           b
+BJJHH JJ  JJJJJJJJJJJJJJJJJJJJJJ  JJJJJJ   b
+BJJJJJJR                          JJJJJJJJJb
+3jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj4

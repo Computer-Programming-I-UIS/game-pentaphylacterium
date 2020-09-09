@@ -1,20 +1,20 @@
 1SSSSDSSSSSSSSSSSSSSSPSSSSSSSSSDSSSSSSSSSSD1
 2ssssdssssssssssssssspsssssssssdssssssssssd2
-BHRHRHRHRHRHRHRHRHRH   HRHRHRJJJJ  CC      b
-B                            JJJJ          b
-B                C       C   JJJJ          b
-B     R          C       C   JJJJ          b
-B                            JJJJ          b
-B                            JJJJ    C    Hb
-B H      R                   JJJJ    C     b
-B  H                        RJJJJR   C     b
-B H                                  C     b
-B                           RJJJJR   C     b
-B     R          R          CJJJJ    C     b
-B                           CJJJJ          b
-B         R     R           CJJJJ          b
-B                           CJJJJ          b
-B H H                       CJJJJ  R       b
-B  H       R                CJJJJ          b
-B H H                CC     CJJJJ        H b
-3AAAAAAAAAAAAAAAAAAAAAAAAAAAAjjjjAAAAAAAAAA4
+BRRC   CRRRCRHHHCHHH   CRRRRRRRR       RRRRb
+BRHR   RCRRRRCRRR               RRRRR  RRRRb
+BRRH      CH       RRRRRRRRRRR  RRRRR  RRRRb
+BRHRR  RRRRRRRRRR  RRRRRRRRRRRRRRRRRR  RCCRb
+BRRRR  RRRCCCCRRR  RHHHHHHHHHR  RRRRR  RRRRb
+BRRRR  RRRRRRRRRR  RRR   C  RR  RRRRR  RRRRb
+BR     RRRR        RRHHHHHHHRR           RRb
+BRRRR  RRRR  RRRR  RRRRRRRRRRR  RRRRR    RRb
+BRHRR                      C    RRRRR    RRb
+BRRRR  RRRRRRRRRR  RRRRRRRCRRRRRRCCCRRR  RRb
+BRRRR  RRRRRRRRRR  R         C           RRb
+BRHRR              RRRRRRRRRRRRCRRRRRRR  RRb
+BRRRR  RRRRRRRRRRRRRRRRRRCRRCRRRRRRRRRR  RRb
+BRRRR  RRRRRRRRRRRRRRRRRRRRRRRRR         RRb
+BRRRR               RRHHHHHHHHRR  RRRRRRRRRb
+BRHRRRRRRRRRRRRRC   RRRRRCCRRRRR  RRRRRRRRRb
+BRHRRRRRRRRRRRRRR                 RRRRRRRRRb
+3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4 
