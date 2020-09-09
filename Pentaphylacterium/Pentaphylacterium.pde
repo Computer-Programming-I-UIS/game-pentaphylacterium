@@ -95,8 +95,13 @@ void draw() {
   case 15:
     nivelCompletado4();
     break;
+  case 16:
+    intro5();
+    break;
+  case 17:
+    intro6();
+    break;
   }
-
 
   oneClick();   //función para dar click solo una vez
 

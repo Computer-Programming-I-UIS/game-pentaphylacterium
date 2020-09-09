@@ -53,8 +53,8 @@ void crearBotones() {
   botones[13] = new Boton(width-resizeX(500), resizeY(850), resizeX(350), resizeY(100), "Menu Principal");
   botones[14] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Reintentar");
   botones[15] = new Boton(width-resizeX(500), resizeY(650), resizeX(350), resizeY(100), "Continuar");
-  botones[16] = new Boton(width-resizeX(320), height - resizeY(120), resizeX(250), resizeY(80), "Siguiente");
-  botones[17] = new Boton(width/2 - resizeX(250), height - resizeY(150), resizeX(250), resizeY(80), "Jugar");
+  botones[16] = new Boton(width-resizeX(550), height - resizeY(120), resizeX(220), resizeY(80), "Siguiente");
+  botones[17] = new Boton(width-resizeX(550), height - resizeY(120), resizeX(220), resizeY(80), "Jugar");
 }
 
 //Método para cargar los audios
@@ -244,12 +244,6 @@ void opciones() {
     s_click.play();
     numVentana = 0;
   }
-  botones[17].dibujar();
-  if (botones[17].click()) {
-    numNivel = 0;
-    nivel.cambiarNivel(1);
-    numVentana = 4;
-  }
 }
 
 void creditos() {
@@ -398,7 +392,26 @@ void intro4() {
   botones[16].dibujar();
   if (botones[16].click()) {
     s_click.play();
-    numVentana = 2;
+    numVentana = 16;
+  }
+}
+
+void intro5() {
+  image(instrucciones, 0, 0);
+  botones[16].dibujar();
+  if (botones[16].click()) {
+    s_click.play();
+    numVentana = 17;
+  }
+}
+
+void intro6() {
+  image(cambioNivel1, 0, 0);
+  botones[17].dibujar();
+  if (botones[17].click()) {
+    numNivel = 0;
+    nivel.cambiarNivel(1);
+    numVentana = 4;
   }
 }
 

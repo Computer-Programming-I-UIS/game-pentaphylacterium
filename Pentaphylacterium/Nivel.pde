@@ -1,6 +1,6 @@
 class Nivel {
 
-  Protagonista player = new Protagonista(round(32*width/36), round(4*height/9), 10);
+  Protagonista player = new Protagonista(round(32*width/36), round(15*height/36), 10);
   Enemigo[] enemigos;
   int enemigosActivos = 1;
   int nivelesSuperados = 0;
@@ -61,8 +61,8 @@ class Nivel {
     if (player.getpx() <= 665 && player.getpy() >= 0 && player.getpx() >= 620 && player.getpy() <= 50) {
       siguienteNivel();
       for (int i = 0; i < enemigosActivos; i++) {
-        player.px = 32*width/36;
-        player.py = height/2;
+        player.px = round(32*width/36);
+        player.py = round(15*height/36);
         enemigosActivos = 0;
         float aleatorio = random(0, 1);
         if (aleatorio < 0.5)
@@ -106,8 +106,8 @@ class Nivel {
         nivel2.stop();
         nivel3.stop();
         die.play();
-        player.px = 32*width/36;
-        player.py = height/2;
+        player.px = round(32*width/36);
+        player.py = round(15*height/36);
         enemigosActivos = 0;
         float aleatorio = random(0, 1);
         if (aleatorio < 0.5)
