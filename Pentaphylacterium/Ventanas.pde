@@ -18,7 +18,12 @@ PImage instrucciones;
 PImage sprite;
 PImage fondo;
 PImage tileset;
-PImage cambioNivel;
+PImage cambioNivel1;
+PImage cambioNivel2;
+PImage cambioNivel3;
+PImage cambioNivel4;
+PImage cambioNivel5;
+PImage victory;
 PImage menuNiveles;
 PImage GameOver;
 PImage mapa;
@@ -71,7 +76,12 @@ void cargarImagenes() {
   inicio = loadImage("Menu.png");
   fondo = loadImage("Fondo.png");
   tileset = loadImage("Dungeon01.png");
-  cambioNivel = loadImage("cambio.png");
+  cambioNivel1 = loadImage("nivel1.png");
+  cambioNivel2 = loadImage("nivel2.png");
+  cambioNivel3 = loadImage("nivel3.png");
+  cambioNivel4 = loadImage("nivel4.png");
+  cambioNivel5 = loadImage("nivel5.png");
+  victory = loadImage("victoria.png");
   menuNiveles = loadImage("niveles.png");
   GameOver = loadImage("Gameover.png");
   mapa = loadImage("Historia.png");
@@ -281,8 +291,59 @@ void gameOver() {
   }
 }
 
-void nivelCompletado() {
-  image(cambioNivel, 0, 0);
+void nivelCompletado1() {
+  image(cambioNivel2, 0, 0);
+  botones[13].dibujar();
+  if (botones[13].click()) {
+    s_click.play();
+    numVentana = 0;
+  }
+
+  botones[12].dibujar();
+  if (botones[12].click()) {
+    s_click.play();
+    numNivel++;
+    nivel.cambiarNivel(numNivel+1);
+    numVentana = 4;
+  }
+}
+
+void nivelCompletado2() {
+  image(cambioNivel3, 0, 0);
+  botones[13].dibujar();
+  if (botones[13].click()) {
+    s_click.play();
+    numVentana = 0;
+  }
+
+  botones[12].dibujar();
+  if (botones[12].click()) {
+    s_click.play();
+    numNivel++;
+    nivel.cambiarNivel(numNivel+1);
+    numVentana = 4;
+  }
+}
+
+void nivelCompletado3() {
+  image(cambioNivel4, 0, 0);
+  botones[13].dibujar();
+  if (botones[13].click()) {
+    s_click.play();
+    numVentana = 0;
+  }
+
+  botones[12].dibujar();
+  if (botones[12].click()) {
+    s_click.play();
+    numNivel++;
+    nivel.cambiarNivel(numNivel+1);
+    numVentana = 4;
+  }
+}
+
+void nivelCompletado4() {
+  image(cambioNivel5, 0, 0);
   botones[13].dibujar();
   if (botones[13].click()) {
     s_click.play();
@@ -299,7 +360,7 @@ void nivelCompletado() {
 }
 
 void juegoTerminado() {
-  image(fondo, 0, 0);
+  image(victory, 0, 0);
   botones[13].dibujar();
   if (botones[13].click()) {
     numVentana = 0;

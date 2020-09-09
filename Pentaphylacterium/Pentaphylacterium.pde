@@ -63,7 +63,7 @@ void draw() {
     }
     break;
   case 5:
-    nivelCompletado();
+    nivelCompletado1();
     break;
   case 6:
     juegoTerminado();
@@ -85,6 +85,15 @@ void draw() {
     break;
   case 12:
     intro4();
+    break;
+  case 13:
+    nivelCompletado2();
+    break;
+  case 14:
+    nivelCompletado3();
+    break;
+  case 15:
+    nivelCompletado4();
     break;
   }
 

@@ -79,10 +79,19 @@ class Nivel {
     nivel1.stop();
     nivel2.stop();
     nivel3.stop();
-    if (numNivel < 4) {
+    if (numNivel == 0) {
       numVentana = 5;
       nivelCompletado.play();
-    } else{
+    } else if (numNivel == 1){
+      numVentana = 13;
+      nivelCompletado.play();
+    } else if (numNivel == 2){
+      numVentana = 14;
+      nivelCompletado.play();
+    } else if (numNivel == 3){
+      numVentana = 15;
+      nivelCompletado.play();
+    } else if (numNivel == 4){
       numVentana = 6;
       victoria.play();
     }
