@@ -252,7 +252,7 @@ void creditos() {
   text(" COLABORACION MUSICAL", 650, y+190);
   text(" Camila Andrea Gómez Pérez. Estudiante de música UIS", 650, y+225);
   text(" APOYO E INSTRUCCIÓN", 650, y+285);
-  text(" Alex Julián Mantilla Rios. Estudiante de Ing. Electrónica UIS", 650, y+320);
+  text(" Alex Julian Mantilla Rios. Estudiante de Ing. Electrónica UIS", 650, y+320);
   text(" Camilo Eduardo Rojas Ortiz. Docente Cátedra UIS", 650, y+355);
 
   y--;
