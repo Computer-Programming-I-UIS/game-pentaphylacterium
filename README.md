@@ -5,6 +5,8 @@
 ### Descripción
 Ayuda al intrépido explorador a surcar las laberínticas y peligrosas mazmorras llenas de espectros en búsqueda de los fragmentos perdidos del mítico talismán, el legendario Pentaphylacterium codiciado por todos los cazatesoros.
 
+![./Trailer.gif](./Trailer.gif)
+
 ![./Historia.png](./Historia.png)
 
 ### Controles
