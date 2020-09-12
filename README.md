@@ -1,6 +1,6 @@
 # Pentaphylacterium
 
-![./Menu.png](.Banner.png)
+![./Banner.png](.Banner.png)
 
 ### Descripción
 Ayuda al intrépido explorador a surcar las laberínticas y peligrosas mazmorras llenas de espectros en búsqueda de los fragmentos perdidos del mítico talismán, el legendario Pentaphylacterium codiciado por todos los cazatesoros.
